@@ -16,7 +16,7 @@ body {
 header {
     width: 100%;
     height: 100vh; /* Ajustar a la mitad de la altura de la ventana */
-    background-image: url('../img/portada.jpg');
+    background-image: url('../../img/electrodomestico.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -64,6 +64,7 @@ header {
     justify-content: space-between;
     flex-grow: 1;
     margin-top: 10px;
+    margin-right: 5px;
     padding-left: 5px;
     padding-right: 17px;
 }
@@ -202,20 +203,6 @@ header {
     text-align: left; /* Alinear el texto a la izquierda */
 }
 
-.static-text {
-    font-size: 50px; /* Tamaño grande */
-    font-weight: bold;
-    color: white; /* Color blanco */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Agregado sombreado */
-}
-
-.dynamic-text {
-    font-size: 50px; /* Tamaño grande */
-    font-weight: bold;
-    color: #FF5733; /* Cambiado a un tono naranja */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Agregado sombreado */
-}
-
 .dropdown {
     position: relative;
     display: inline-block;
@@ -283,68 +270,46 @@ header {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 80px; /* Altura deseada de la barra */
-    background-color: rgba(0, 0, 0, 0.5); /* Color de fondo oscuro transparente */
-    z-index: 1; /* Asegura que la barra esté detrás de los botones */
+    height: 110px;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 1;
+    text-align: center;
+    color: rgb(229, 225, 225);
+    font-family: 'Roboto', sans-serif;
 }
 
-.card-container {
+.button-bar h2 {
+    text-shadow: 0px 0px 3px #88f065;
+}
+
+.panel {
     display: flex;
     justify-content: space-around;
-    margin-top: 20px;
-}
-
-.card {
-    flex-basis: 31%;
-    background-color: #323131; /* Fondo oscuro */
-    color: #ffffff; /* Texto blanco */
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.859); /* Ajuste de la sombra */
-    margin-bottom: 20px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
 }
 
-.card h2 {
-    font-family: 'Roboto', sans-serif; /* Tipografía estética */
-    font-size: 24px;
-    margin-bottom: 10px;
+.column {
     text-align: center;
 }
 
-.card p {
-    font-family: 'Roboto', sans-serif; /* Tipografía estética */
-    font-size: 16px;
-    line-height: 1.6;
-}
-
-.testimonials-section {
-    background-color: #e2e2e2; /* Fondo blanco */
-    margin: 10px;
-    padding: 20px; /* Espaciado interno */
-    text-align: center; /* Alineación del texto */
-    border-radius: 15px;
-}
-
-.testimonials-section h2{
-    font-family: 'Roboto', sans-serif; /* Tipografía estética */
-    font-size: 24px;
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.testimonials-container {
+.circle {
+    width: 100px;
+    height: 100px;
+    background-color: grey;
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px; /* Espacio entre las tarjetas y la franja de testimonios */
+    margin-bottom: 10px;
 }
 
-.testimonials-container img {
-    width: 245px; /* Ancho de las imágenes de testimonios */
-    height: auto;
-    margin: 0 10px; /* Espacio entre las imágenes */
-    border-radius: 5px;
+.circle i {
+    font-size: 36px;
+    color: white;
 }
+
 
 /* Estilos del pie de página */
 .footer-container {
