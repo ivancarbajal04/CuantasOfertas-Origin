@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
+
+body{
+    background-color: #1e1e1ecd;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: large;
+
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+}
+
+.logo img{
+    width:300px;
+    height: 100px;
+}
+
+.modal-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-container {
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+}
+
+.modal-input {
+    width: 48%; /* Establece un ancho del 48% para cada campo de nombre y apellido, y para cada campo de teléfono y email */
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.full-width {
+    width: 50%; /* Establece un ancho del 100% para el campo de consulta */
+}
+
+.modal-submit {
+    width: 30%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #74EE4A;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.modal-submit:hover {
+    background-color: #63cc3b;
+}
+
+.labels {
+    margin-top: 10px;
+    display: block;
+}

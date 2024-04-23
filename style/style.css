@@ -1,16 +1,107 @@
 /* Agregar una fuente de Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
 body {
     overflow-x: hidden;
     background-color: #1e1e1ecd; /* Cambiar color de fondo a oscuro */
+}
+
+/* Pop up Super Ofertas weekend */
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #323131;
+    padding: 40px; /* Aumenta el relleno para dar más espacio al contenido */
+    text-align: center;
+    border: 1px solid #888;
+    width: 90%; /* Ajusta el ancho del pop-up */
+    max-width: 800px; /* Establece un ancho máximo para evitar que el pop-up sea demasiado grande */
+    height: 95%; /* Ajusta la altura del pop-up */
+    max-height: 600px; /* Establece una altura máxima */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.popup-image {
+    width: 100%;
+}
+
+.transparent-strip {
+    position: absolute;
+    bottom: 210px;
+    left: 40px;
+    width: 90%;
+    height: 50px; /* Altura de la franja transparente, ajusta según necesites */
+    background-color: rgba(0, 0, 0, 0.3); /* Color y opacidad de la franja */
+    pointer-events: none; /* Permite que los clics pasen a través de la franja transparente */
+}
+
+#countdown-text{
+    color: #C1D101;
+    margin-top: 15px;
+    font-family: "Silkscreen", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.close {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.modal-submit {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #74EE4A;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.modal-submit:hover {
+    background-color: #63cc3b;
 }
 
 header {
@@ -22,7 +113,7 @@ header {
 }
 
 .ofertas {
-    color: #74EE4A;
+    color: #C1D101;
 }
 
 .navbar {
@@ -109,7 +200,7 @@ header {
     position: absolute;
     width: 0;
     height: 2px;
-    background-color: #74EE4A; /* Color del "laser" */
+    background-color: #C1D101; /* Color del "laser" */
     transition: width 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.8); /* Agregar sombra blanca */
 }
@@ -130,21 +221,8 @@ header {
     box-shadow: 0 0 20px 2px rgba(255, 255, 255, 0.8);
 }
 
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    width: max-content;
-    background-color: #ffffff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    top: calc(100% + 5px);
-    left: 0;
-    white-space: nowrap;
-    overflow-x: auto;
-    overflow-y: auto;
-}
 
-.dropdown:hover .dropdown-menu {
+.dropdown:hover  {
     display: block;
     z-index: 1001;
 }
@@ -164,40 +242,55 @@ header {
     margin-top: auto; /* Coloca los botones al final del contenedor */
 }
 
+@keyframes highlight {
+    0% {
+        box-shadow: 0 0 0 0 rgb(193, 209, 1); /* Sin sombra */
+    }
+    100% {
+        box-shadow: 0 0 20px 20px rgba(0, 255, 0, 0); /* Agranda la sombra */
+    }
+    /* 100% {
+        box-shadow: 0 0 0 0 rgb(193, 209, 1);
+    } */
+}
+
+
 .flyer-button {
     margin: 10px;
-    padding: 10px 20px;
+    padding: 15px;
     font-size: 16px;
     font-weight: bold;
     color: #ffffff;
     background-color: transparent;
-    border: 2px solid transparent;
-    border-radius: 5px;
+    border: 1px solid transparent;
+    border-radius: 50%;
     cursor: pointer;
-    transition: transform 0.3s, box-shadow 0.3s;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     position: relative;
-    text-align: center;
+    overflow: hidden;
+    animation: highlight 3s infinite; /* La animación se repetirá constantemente */
 }
+
+
+.flyer-button::after {
+    border-width: 5px; /* Ancho inicial */
+    opacity: 0; /* Inicialmente invisible */
+}
+
+
 
 .flyer-button img {
     width: 40px;
     height: 40px;
     margin-right: 10px;
+    margin-left: 10px;
 }
 
-.flyer-button:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 10px 2px #74EE4A; /* Efecto de resplandor azul */
-}
 
 /* Estilos del texto en el flyer */
 .text-container {
     position: absolute;
     left: 19%; /* Ajustar la posición horizontal */
-    top: 60%; /* Ajustar la posición vertical */
+    top: 40%; /* Ajustar la posición vertical */
     transform: translate(-50%, -50%);
     text-align: left; /* Alinear el texto a la izquierda */
 }
@@ -273,19 +366,25 @@ header {
 
 .dropdown:hover .dropdown-content {display: block;}
 
-.button-container button img {
-    width: 40px;
-    height: 30px;
-}
 
 .button-bar {
     position: absolute;
-    bottom: 0;
+    bottom: 70px;
     left: 0;
     width: 100%;
-    height: 80px; /* Altura deseada de la barra */
+    height: 200px; /* Altura deseada de la barra */
     background-color: rgba(0, 0, 0, 0.5); /* Color de fondo oscuro transparente */
     z-index: 1; /* Asegura que la barra esté detrás de los botones */
+    color: rgb(229, 225, 225);
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+.button-bar h2 {
+    font-weight: 400;
+    text-shadow: 0px 0px 3px #88f065;
+    margin-right: 20px;
+    margin-top: 10px;
 }
 
 .card-container {
@@ -317,39 +416,111 @@ header {
     line-height: 1.6;
 }
 
-.testimonials-section {
-    background-color: #e2e2e2; /* Fondo blanco */
-    margin: 10px;
-    padding: 20px; /* Espaciado interno */
-    text-align: center; /* Alineación del texto */
-    border-radius: 15px;
-}
-
-.testimonials-section h2{
-    font-family: 'Roboto', sans-serif; /* Tipografía estética */
+.slider h2{
+    font-family: 'Roboto', sans-serif;
     font-size: 24px;
     margin-bottom: 10px;
     text-align: center;
+    color: white;
 }
 
-.testimonials-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px; /* Espacio entre las tarjetas y la franja de testimonios */
-}
-
-.testimonials-container img {
-    width: 245px; /* Ancho de las imágenes de testimonios */
+.slider{
+    width: 75vw;
     height: auto;
-    margin: 0 10px; /* Espacio entre las imágenes */
-    border-radius: 5px;
+    margin: auto;
+    margin-bottom: 20px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.slider .slide-track{
+    display: flex;
+    /* background-color: #aaa; */
+    animation: scroll 40s linear infinite;
+    -webkit-animation: scroll 40s linear infinite;
+    width: calc(200px * 10);
+}
+
+.slider .slide{
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    width: 200px;
+}
+
+.slider .slide img{
+    width: 100%;
+}
+
+@keyframes scroll {
+    0%{
+        transform: translateX(0);
+        -webkit-animation: translateX(0);
+    }
+    100%{
+        transform: translateX(calc(-200px * 5));
+        -webkit-animation: translateX(calc(-200px * 5));
+    }
+}
+
+/* Medios de pago */
+
+.opciones-pago {
+    width: 75vw;
+    height: 25vh;
+    margin-left: 12%;
+    background-color: transparent;
+    padding: 10px 0;
+    border-radius: 20px;
+  }
+  
+.opciones-pago  .contenedor {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+.contenedor  h2 {
+    font-size: 24px;
+    color: white;
+    /* margin-bottom: 20px; */
+  }
+  
+  .opciones {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  .opcion {
+    width: 25%;
+    padding: 20px;
+    /* border-right: 1px solid #ddd; */
+    text-align: center;
+  }
+  
+  
+  .opcion p {
+    margin-top: 10px;
+    padding-bottom: 10px;
+    font-size: 14px;
+    color: white;
+  }
+  
+.animate__flip{
+    animation-play-state: paused;
+}
+.animate__flip:hover{
+    animation-play-state: running;
+    animation-iteration-count: infinite;
 }
 
 /* Estilos del pie de página */
 .footer-container {
     display: flex;
     justify-content: space-between;
+    margin-top: 30px;
     align-items: center;
     font-family: 'Roboto', sans-serif;
     padding: 20px;
@@ -409,3 +580,94 @@ header {
     color: #00FF00;
     text-shadow: 0px 0px 3px #000000;
   }
+
+
+  /* Modal */
+
+  .modal {
+    display: none; /* El modal estará oculto inicialmente */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semi-transparente */
+}
+
+.modal-content {
+    background-color: #323131;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Ancho del modal */
+    max-width: 600px; /* Ancho máximo del modal */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Estilos adicionales para el contenido del modal */
+.modal-header,
+.modal-footer {
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc; /* Línea divisoria */
+    text-align: center;
+}
+
+.modal-header{
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+/* Estilos para el formulario dentro del modal */
+.modal-form {
+    text-align: left;
+}
+
+.modal-form label{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    color: white;
+}
+
+.modal-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.modal-submit {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #74EE4A; /* Color de fondo del botón */
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Transición suave */
+}
+
+.modal-submit:hover {
+    background-color: #63cc3b; /* Cambio de color al pasar el mouse */
+}

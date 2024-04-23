@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta lang="es">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="logo">
+        <img src="../../img/ISOLOGOTIPO.png" alt="">
+    </div>
+    <form method="post" id="newsletterForm" class="modal-form" action="https://hooks.zapier.com/hooks/catch/18644409/37bl61j/">
+        <br>
+        <div class="input-container">
+            <input type="text" id="name" name="name" class="modal-input" placeholder="Escribí tu nombre" required>
+            <input type="text" id="lastname" name="lastname" class="modal-input" placeholder="Escribí tu apellido" required>
+        </div>
+        
+        <div class="input-container">
+            <input type="email" id="email" name="email" class="modal-input" placeholder="Escribí tu email" required>
+            <input type="tel" id="phone" name="phone" class="modal-input" placeholder="Escribí tu número" required>
+        </div>
+        
+        <textarea id="query" name="query" class="modal-input full-width" placeholder="Escribí tu consulta" required></textarea>
+        
+        <button type="submit" class="modal-submit">Enviar</button>
+    </form>
+
+    <script src="index.js"></script>
+</body>
+</html>
