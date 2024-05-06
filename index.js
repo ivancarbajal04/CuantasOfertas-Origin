@@ -4,16 +4,16 @@ let currentWordIndex = 0;
 
 function animateWordIn(word) {
     dynamicTextElement.innerHTML = word;
-    dynamicTextElement.classList.add('animate__animated', 'animate__zoomInDown');
+    dynamicTextElement.classList.add('animate__animated', 'animate__fadeIn');
 }
 
 function animateWordOut() {
-    dynamicTextElement.classList.remove('animate__zoomInDown');
-    dynamicTextElement.classList.add('animate__animated', 'animate__zoomOutUp');
+    dynamicTextElement.classList.remove('animate__fadeIn');
+    dynamicTextElement.classList.add('animate__animated', 'animate__fadeOut');
 
     setTimeout(() => {
-        dynamicTextElement.classList.remove('animate__zoomOutUp');
-    }, 1000); // Tiempo de espera antes de eliminar la clase de animación
+        dynamicTextElement.classList.remove('animate__fadeOut');
+    }, 1000);
 }
 
 function showNextWord() {
@@ -207,7 +207,7 @@ function updateCountdown() {
     var minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
 
-    var countdownText = "Faltan " + days + " días, " + hours + " horas, " + minutes + " minutos y " + seconds + " segundos";
+    var countdownText = days + " días, " + hours + " horas, " + minutes + " minutos y " + seconds + " segundos";
 
     // Cambia el texto si es sábado a las 00:00
     if (now.getDay() === 6 && now.getHours() === 0 && now.getMinutes() === 0 && now.getSeconds() === 0) {
