@@ -279,8 +279,46 @@ header {
 }
 
 .button-bar h2 {
+    font-weight: 400;
     text-shadow: 0px 0px 3px #88f065;
 }
+
+.slider{
+    width: 75vw;
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slider .slide-track{
+    display: flex;
+    animation: scroll 40s linear infinite;
+    -webkit-animation: scroll 40s linear infinite;
+    width: calc(200px * 14);
+}
+
+.slider .slide{
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    width: 200px;
+}
+
+.slider .slide img{
+    width: 100%;
+}
+
+@keyframes scroll {
+    0%{
+        transform: translateX(0);
+        -webkit-animation: translateX(0);
+    }
+    100%{
+        transform: translateX(calc(-200px * 7));
+        -webkit-animation: translateX(calc(-200px * 7));
+    }
+}
+
 
 .panel {
     display: flex;

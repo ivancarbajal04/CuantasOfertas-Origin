@@ -282,6 +282,26 @@ header {
     text-shadow: 0px 0px 3px #88f065;
 }
 
+.marcas {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slide-marcas {
+    display: flex;
+    white-space: nowrap;
+}
+
+.slide-marcas img {
+    width: auto;
+    height: 100px;
+    display: block;
+    width: auto;
+    height: auto;
+}
+
+
 .panel {
     display: flex;
     justify-content: space-around;
