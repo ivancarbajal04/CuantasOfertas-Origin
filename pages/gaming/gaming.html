@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="style.css">
     <title>Infraestructura</title>
 </head>
+
 <body>
     <header>
         <nav class="navbar">
@@ -41,30 +43,32 @@
                         <a class="nav-link" href="../blog/blog.html">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../corporativo/corpo.html">Ventas <span class="ofertas">Corporativas</span></a>
+                        <a class="nav-link" href="../corporativo/corpo.html">Ventas <span
+                                class="ofertas">Corporativas</span></a>
                     </li>
                 </ul>
             </div>
         </nav>
-            <div class="button-bar">
-                <h2>Contactate con nosotros</h2>
-                <div class="button-container">
-                    
-                    <div class="dropdown">
-                        <button id="dropdown-button" class="flyer-button">
-                            <img src="../../img/WhatsApp_icon.png" alt="WhatsApp Icon" style="height: 40px;">
-                        </button>
-                        <div id="dropdown-content" class="dropdown-content">
-                            <a href="https://wa.me/xxxxxxxxxx" class="flyer-button dropdown-item whatsapp-link">Alberto 🧑🏽‍💻</a>
-                            <a href="https://wa.me/xxxxxxxxxx" class="flyer-button dropdown-item whatsapp-link">Raul 🧑🏽‍💻</a>
-                            <a href="https://wa.me/xxxxxxxxxx" class="flyer-button dropdown-item whatsapp-link">Solange 👩🏻‍💻</a>
-                        </div>
+        <div class="button-bar">
+            <h2>Contactate con nosotros</h2>
+            <div class="button-container">
+                <div class="dropdown">
+                    <button id="dropdown-button" class="flyer-button">
+                        <img src="../../img/wpp.png" alt="WhatsApp Icon" style="height: 100px; width: 100px;">
+                    </button>
+                    <div id="dropdown-content" class="dropdown-content">
+                        <a href="https://wa.me/xxxxxxxxxx" class="dropdown-item whatsapp-link">Alberto 🧑🏽‍💻</a>
+                        <a href="https://wa.me/xxxxxxxxxx" class="dropdown-item whatsapp-link">Raul 🧑🏽‍💻</a>
+                        <a href="https://wa.me/xxxxxxxxxx" class="dropdown-item whatsapp-link">Solange 👩🏻‍💻</a>
                     </div>
-                    
-                    <button class="flyer-button"><img src="../../img/Google_Meet_icon_(2020).svg.png" alt=""></button>
-                    <button class="flyer-button"><img src="../../img/telefono2.png" alt="" style="height: 40px;"></button>
-                </div>  
+                </div>
+
+                <button class="flyer-button" onclick="openCalendly()"><img src="../../img/meet.png" alt=""
+                        style="height: 60px; width: 100px;"></button>
+                <button class="flyer-button" onclick="openContacto()"><img src="../../img/telefono.png" alt=""
+                        style="height: 70px; width: 100px;"></button>
             </div>
+        </div>
     </header>
 
     <main>
@@ -127,4 +131,5 @@
     </footer>
     <script src="../index.js"></script>
 </body>
+
 </html>

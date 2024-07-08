@@ -51,7 +51,7 @@ body {
 
 .transparent-strip {
     position: absolute;
-    bottom: 210px;
+    bottom: 240px;
     left: 40px;
     width: 90%;
     height: 50px; /* Altura de la franja transparente, ajusta según necesites */

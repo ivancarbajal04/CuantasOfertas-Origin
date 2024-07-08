@@ -294,7 +294,7 @@ header {
     display: flex;
     animation: scroll 40s linear infinite;
     -webkit-animation: scroll 40s linear infinite;
-    width: calc(200px * 14);
+    width: calc(200px * 10);
 }
 
 .slider .slide{
@@ -314,8 +314,8 @@ header {
         -webkit-animation: translateX(0);
     }
     100%{
-        transform: translateX(calc(-200px * 7));
-        -webkit-animation: translateX(calc(-200px * 7));
+        transform: translateX(calc(-200px * 5));
+        -webkit-animation: translateX(calc(-200px * 5));
     }
 }
 
