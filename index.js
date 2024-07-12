@@ -1,5 +1,5 @@
 const dynamicTextElement = document.getElementById('dynamicText');
-const words = ['Puto', 'el', 'que', 'lee', 'prueba piloto']; // Define tus palabras aquí
+const words = ['Los mejores precios']; // Define tus palabras aquí
 let currentWordIndex = 0;
 
 function animateWordIn(word) {
