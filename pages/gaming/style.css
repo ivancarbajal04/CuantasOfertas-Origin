@@ -253,6 +253,78 @@ header {
 
 .dropdown:hover .dropdown-content {display: block;}
 
+.modal {
+    display: none; /* El modal estará oculto inicialmente */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semi-transparente */
+}
+
+.modal-content {
+    background-color: #323131;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Ancho del modal */
+    max-width: 600px; /* Ancho máximo del modal */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.modal-header,
+.modal-footer {
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc; /* Línea divisoria */
+    text-align: center;
+}
+
+.modal-header{
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+/* Estilos para el formulario dentro del modal */
+.modal-form {
+    text-align: left;
+}
+
+.modal-form label{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    color: white;
+}
+
+.modal-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.modal-submit {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #74EE4A; /* Color de fondo del botón */
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Transición suave */
+}
+
+.modal-submit:hover {
+    background-color: #63cc3b; /* Cambio de color al pasar el mouse */
+}
 
 .button-bar {
     position: absolute;
@@ -266,6 +338,43 @@ header {
     font-family: 'Roboto', sans-serif;
     text-align: center;
 }
+
+.slider{
+    width: 75vw;
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slider .slide-track{
+    display: flex;
+    animation: scroll 40s linear infinite;
+    -webkit-animation: scroll 40s linear infinite;
+    width: calc(200px * 11);
+}
+
+.slider .slide{
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    width: 200px;
+}
+
+.slider .slide img{
+    width: 100%;
+}
+
+@keyframes scroll {
+    0%{
+        transform: translateX(0);
+        -webkit-animation: translateX(0);
+    }
+    100%{
+        transform: translateX(calc(-200px * 5.5));
+        -webkit-animation: translateX(calc(-200px * 5.5));
+    }
+}
+
 
 .panel {
     display: flex;

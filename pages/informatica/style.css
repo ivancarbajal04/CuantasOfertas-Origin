@@ -15,14 +15,14 @@ body {
 
 header {
     width: 100%;
-    height: 100vh; /* Ajustar a la mitad de la altura de la ventana */
+    height: 110vh; /* Ajustar a la mitad de la altura de la ventana */
     background-image: url('../../img/informatica.jpg');
     background-size: cover;
     background-position: center;
 }
 
 .ofertas {
-    color: #74EE4A;
+    color: #C1D101;
 }
 
 .navbar {
@@ -110,7 +110,7 @@ header {
     position: absolute;
     width: 0;
     height: 2px;
-    background-color: #74EE4A; /* Color del "laser" */
+    background-color: #C1D101; /* Color del "laser" */
     transition: width 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.8); /* Agregar sombra blanca */
 }
@@ -157,42 +157,35 @@ header {
     display: block;
 }
 
-/* Estilos de los botones */
 .button-container {
-    display: flex; /* Agregado para usar flexbox */
-    justify-content: center; /* Opcional: para centrar los botones horizontalmente */
-    text-align: center;
-    margin-top: auto; /* Coloca los botones al final del contenedor */
+    display: flex; /* Usar flexbox para alinear los botones */
+    justify-content: center; /* Centrar los botones horizontalmente */
+    align-items: center; /* Centrar los botones verticalmente */
+    /* gap: 10px;  */
 }
 
 .flyer-button {
-    margin: 10px;
-    padding: 10px 20px;
+    /* margin: 10px; */
+    /* padding: 15px; */
     font-size: 16px;
     font-weight: bold;
     color: #ffffff;
     background-color: transparent;
-    border: 2px solid transparent;
-    border-radius: 5px;
+    border: 1px solid transparent;
+    border-radius: 50%;
     cursor: pointer;
-    transition: transform 0.3s, box-shadow 0.3s;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     position: relative;
-    text-align: center;
+    overflow: hidden;
 }
 
 .flyer-button img {
-    width: 40px;
-    height: 40px;
-    margin-right: 10px;
+    width: 170px; /* Ajusta este valor según sea necesario */
+    height: 170px; /* Ajusta este valor según sea necesario */
+    padding-bottom: 90px;
+    /* animation: highlight 3s infinite;  */
+    object-fit: contain; 
 }
 
-.flyer-button:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 10px 2px #74EE4A; /* Efecto de resplandor azul */
-}
 
 /* Estilos del texto en el flyer */
 .text-container {
@@ -260,45 +253,126 @@ header {
 
 .dropdown:hover .dropdown-content {display: block;}
 
-.button-container button img {
-    width: 40px;
-    height: 30px;
+.modal {
+    display: none; /* El modal estará oculto inicialmente */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semi-transparente */
+}
+
+.modal-content {
+    background-color: #323131;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Ancho del modal */
+    max-width: 600px; /* Ancho máximo del modal */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.modal-header,
+.modal-footer {
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc; /* Línea divisoria */
+    text-align: center;
+}
+
+.modal-header{
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+/* Estilos para el formulario dentro del modal */
+.modal-form {
+    text-align: left;
+}
+
+.modal-form label{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    color: white;
+}
+
+.modal-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.modal-submit {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #74EE4A; /* Color de fondo del botón */
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Transición suave */
+}
+
+.modal-submit:hover {
+    background-color: #63cc3b; /* Cambio de color al pasar el mouse */
 }
 
 .button-bar {
     position: absolute;
-    bottom: 0;
+    bottom: 5px;
     left: 0;
     width: 100%;
-    height: 110px;
-    background-color: rgba(0, 0, 0, 0.5); 
-    z-index: 1;
-    text-align: center;
+    height: 80px; /* Altura deseada de la barra */
+    background-color: rgba(0, 0, 0, 0.5); /* Color de fondo oscuro transparente */
+    z-index: 1; /* Asegura que la barra esté detrás de los botones */
     color: rgb(229, 225, 225);
     font-family: 'Roboto', sans-serif;
+    text-align: center;
 }
 
-.button-bar h2 {
-    text-shadow: 0px 0px 3px #88f065;
-}
-
-.marcas {
-    position: relative;
-    width: 100%;
+.slider{
+    width: 75vw;
+    height: auto;
+    margin: auto;
     overflow: hidden;
 }
 
-.slide-marcas {
+.slider .slide-track{
     display: flex;
-    white-space: nowrap;
+    animation: scroll 40s linear infinite;
+    -webkit-animation: scroll 40s linear infinite;
+    width: calc(200px * 11);
 }
 
-.slide-marcas img {
-    width: auto;
-    height: 100px;
-    display: block;
-    width: auto;
-    height: auto;
+.slider .slide{
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    width: 200px;
+}
+
+.slider .slide img{
+    width: 100%;
+}
+
+@keyframes scroll {
+    0%{
+        transform: translateX(0);
+        -webkit-animation: translateX(0);
+    }
+    100%{
+        transform: translateX(calc(-200px * 5.5));
+        -webkit-animation: translateX(calc(-200px * 5.5));
+    }
 }
 
 
@@ -360,7 +434,7 @@ header {
     position: absolute;
     width: 0;
     height: 2px;
-    background-color: #74EE4A; /* Color del "laser" */
+    background-color: #C1D101; /* Color del "laser" */
     transition: width 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.8); /* Agregar sombra blanca */
 }
