@@ -340,7 +340,8 @@ header {
 }
 
 .slider{
-    width: 75vw;
+    width: 100vw;
+    background-color: white;
     height: auto;
     margin: auto;
     overflow: hidden;
