@@ -15,15 +15,35 @@
     <div class="popup" id="popup">
         <div class="popup-content">
             <span class="close" onclick="closePopup()">&times;</span>
-            <img src="img/super.jpg" alt="Imagen" class="popup-image">
-            <div class="transparent-strip">
-                <p id="countdown-text"></p>
-            </div> <!-- Nuevo elemento para la franja transparente -->
-            <form method="post" id="popupForm" class="modal-form" action="https://hooks.zapier.com/hooks/catch/18644409/3njzfm0/">
-                <input type="text" id="popupName" name="popupName" placeholder="Nombre" required class="modal-input">
-                <input type="email" id="popupEmail" name="popupEmail" placeholder="Correo electrónico" required class="modal-input">
-                <input type="submit" value="Registrarse" class="modal-submit">
+
+            <form method="post" id="popupForm" class="popup-form" action="https://hooks.zapier.com/hooks/catch/18644409/3njzfm0/">
+                <input type="text" id="popupName" name="popupName" placeholder="Nombre" required class="popup-input">
+                <br>
+                <input type="email" id="popupEmail" name="popupEmail" placeholder="Correo electrónico" required class="popup-input">
+                <br>
+                <input type="submit" value="Registrarse" class="popup-submit">
             </form>
+            <div class="transparent-strip">
+                <div class="contador">
+                    <div>   
+                        <p id="countdown-day" class="countdown"></p>
+                        <p class="text">Days</p>
+                    </div>
+                    <div>
+                        <p id="countdown-hour" class="countdown"></p>
+                        <p class="text">Hours</p>
+                    </div>
+                    <div>
+                        <p id="countdown-minute" class="countdown"></p>
+                        <p class="text">Minutes</p>
+                    </div>
+                    <div>
+                        <p id="countdown-second" class="countdown"></p>
+                        <p class="text">Seconds</p>
+                    </div>
+                </div>
+            </div>
+            <p class="start">COMIENZA EN</p>
         </div>
     </div>
     
@@ -185,17 +205,37 @@
 
     <!-- Modal -->
     <div id="myModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2 class="modal-header">¡Suscribite!</h2>
-            <form method="post" id="newsletterForm" class="modal-form" action="https://hooks.zapier.com/hooks/catch/18644409/3njj078/">
+        <div class="popup-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+
+            <form method="post" id="popupForm" class="popup-form" action="https://hooks.zapier.com/hooks/catch/18644409/3njzfm0/">
+                <input type="text" id="popupName" name="popupName" placeholder="Nombre" required class="popup-input">
                 <br>
-                <label for="name" class="labels">Nombre:</label>
-                <input type="text" id="name" name="name" class="modal-input" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" class="modal-input" required>
-                <button type="submit" class="modal-submit">Enviar</button>
+                <input type="email" id="popupEmail" name="popupEmail" placeholder="Correo electrónico" required class="popup-input">
+                <br>
+                <input type="submit" value="Registrarse" class="popup-submit">
             </form>
+            <div class="transparent-strip">
+                <div class="contador">
+                    <div>   
+                        <p id="countdown-day-modal" class="countdown"></p>
+                        <p class="text">Days</p>
+                    </div>
+                    <div>
+                        <p id="countdown-hour-modal" class="countdown"></p>
+                        <p class="text">Hours</p>
+                    </div>
+                    <div>
+                        <p id="countdown-minute-modal" class="countdown"></p>
+                        <p class="text">Minutes</p>
+                    </div>
+                    <div>
+                        <p id="countdown-second-modal" class="countdown"></p>
+                        <p class="text">Seconds</p>
+                    </div>
+                </div>
+            </div>
+            <p class="start">COMIENZA EN</p>
         </div>
     </div>
 

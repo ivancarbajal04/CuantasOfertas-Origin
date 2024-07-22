@@ -169,23 +169,32 @@ header {
 }
 
 .flyer-button {
-    /* width: 50px;
-    height: 50px; */
+    /* width: 100px;
+    height: 100px; */
     background-color: transparent;
     border: 1px solid transparent;
     border-radius: 50%;
     cursor: pointer;
     position: relative;
-    bottom: 30px;
-
+    bottom: 5px;
 }
 
-
+@keyframes highlight {
+    0% {
+        box-shadow: 0 0 0 0 rgb(193, 209, 1); /* Sin sombra */
+    }
+    100% {
+        box-shadow: 0 0 20px 20px rgba(0, 255, 0, 0); /* Agranda la sombra */
+    }
+    /* 100% {
+        box-shadow: 0 0 0 0 rgb(193, 209, 1);
+    } */
+}
 
 .flyer-button img {
-    width: 130px;
-    height: 130px;
-    object-fit: contain;
+    width: 85px;
+    height: 75px;
+    object-fit:cover;
 }
 
 .dropdown {
@@ -200,12 +209,12 @@ header {
     background-color: transparent;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     z-index: 1000;
-    bottom: calc(100% + 5px); /* Cambia la posición a partir de la parte inferior */
+    bottom: calc(100% + 5px);
     left: 0;
     white-space: nowrap;
     overflow-x: auto;
     overflow-y: auto;
-    animation: dropdown-animation 0.3s; /* Cambia la dirección de la animación */
+    animation: dropdown-animation 0.3s; 
 }
 
 @keyframes dropdown-animation {
@@ -224,26 +233,40 @@ header {
     z-index: 1001;
 }
 
-/* Estilos de los enlaces dentro del menú desplegable */
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
 
 .dropdown-content a.whatsapp-link {
     color: #ffffff; /* Color del texto */
     font-family: 'Roboto', sans-serif; /* Tipo de fuente */
     font-weight: 500; /* Grosor de la fuente */
     text-decoration: none; /* Quitar subrayado */
+    /* border: 1px solid #33A8DD; */
+    border-radius: 3px;
+    margin: 3px;
 }
 
 .dropdown-content a.whatsapp-link:hover {
     color: #ffffff; /* Color del texto al pasar el mouse */
+    border: 1px solid #33A8DD;
+    box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.8);
 }
 
 .dropdown:hover .dropdown-content {display: block;}
+
+.status p{
+    color: rgb(106, 106, 106);
+    position: relative;
+    bottom: 60px;
+    left: 300px;
+}
+
+.online {
+    /* font-weight: bold; */
+    color: rgb(15, 220, 15);
+}
+.offline {
+    /* font-weight: bold; */
+    color: rgb(167, 0, 0);
+}
 
 .modal {
     display: none; /* El modal estará oculto inicialmente */

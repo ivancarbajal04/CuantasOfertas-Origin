@@ -182,44 +182,93 @@ window.onload = function() {
 
 // Contador en pop up
 
-function updateCountdown() {
+function updateCountdownPopup() {
     var now = new Date();
     var targetDate;
 
-    // Calcula el próximo sábado a las 00:00
-    var daysUntilSaturday = 6 - now.getDay(); // Días hasta el próximo sábado
+    var daysUntilSaturday = 6 - now.getDay(); 
     if (daysUntilSaturday < 0) {
-        daysUntilSaturday += 7; // Si hoy es sábado, sumamos una semana para ir al próximo
+        daysUntilSaturday += 7;
     }
     targetDate = new Date(now.getTime() + daysUntilSaturday * 24 * 60 * 60 * 1000);
     targetDate.setHours(0, 0, 0, 0);
 
     // Si hoy es sábado, establece el próximo lunes a las 00:00
-    if (now.getDay() === 6) {
-        targetDate.setDate(targetDate.getDate() + 2);
-    }
+    // if (now.getDay() === 6) {
+    //     targetDate.setDate(targetDate.getDate() + 2);
+    // }
 
     var timeDiff = targetDate.getTime() - now.getTime();
 
-    // Calcula los días, horas, minutos y segundos restantes
     var days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
     var hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     var minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
 
-    var countdownText = days + " días, " + hours + " horas, " + minutes + " minutos y " + seconds + " segundos";
+    var countday = days
+    var counthour = hours
+    var countminute = minutes
+    var countseconds = seconds
 
-    // Cambia el texto si es sábado a las 00:00
-    if (now.getDay() === 6 && now.getHours() === 0 && now.getMinutes() === 0 && now.getSeconds() === 0) {
-        countdownText = "Quedan " + days + " días, " + hours + " horas, " + minutes + " minutos y " + seconds + " para finalizar la oferta.";
-    }
+    // // Cambia el texto si es sábado a las 00:00
+    // if (now.getDay() === 6 && now.getHours() === 0 && now.getMinutes() === 0 && now.getSeconds() === 0) {
+    //     countdownText = "Quedan " + days + " días, " + hours + " horas, " + minutes + " minutos y " + seconds + " para finalizar la oferta.";
+    // }
 
     // Actualiza el texto en el elemento HTML
-    document.getElementById("countdown-text").textContent = countdownText;
+    document.getElementById("countdown-day").textContent = countday;
+    document.getElementById("countdown-hour").textContent = counthour;
+    document.getElementById("countdown-minute").textContent = countminute;
+    document.getElementById("countdown-second").textContent = countseconds;
 }
 
-// Actualiza el contador cada segundo
-setInterval(updateCountdown, 1000);
+setInterval(updateCountdownPopup, 1000);
+updateCountdownPopup();
 
-// Llama a la función una vez para iniciar el contador
-updateCountdown();
+function closeModal() {
+    document.getElementById("myModal").style.display = "none";
+}
+
+
+function updateCountdownModal() {
+    var now = new Date();
+    var targetDate;
+
+    var daysUntilSaturday = 6 - now.getDay(); 
+    if (daysUntilSaturday < 0) {
+        daysUntilSaturday += 7;
+    }
+    targetDate = new Date(now.getTime() + daysUntilSaturday * 24 * 60 * 60 * 1000);
+    targetDate.setHours(0, 0, 0, 0);
+
+    // Si hoy es sábado, establece el próximo lunes a las 00:00
+    // if (now.getDay() === 6) {
+    //     targetDate.setDate(targetDate.getDate() + 2);
+    // }
+
+    var timeDiff = targetDate.getTime() - now.getTime();
+
+    var days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+
+    var countday = days
+    var counthour = hours
+    var countminute = minutes
+    var countseconds = seconds
+
+    // // Cambia el texto si es sábado a las 00:00
+    // if (now.getDay() === 6 && now.getHours() === 0 && now.getMinutes() === 0 && now.getSeconds() === 0) {
+    //     countdownText = "Quedan " + days + " días, " + hours + " horas, " + minutes + " minutos y " + seconds + " para finalizar la oferta.";
+    // }
+
+    // Actualiza el texto en el elemento HTML
+    document.getElementById("countdown-day-modal").textContent = countday;
+    document.getElementById("countdown-hour-modal").textContent = counthour;
+    document.getElementById("countdown-minute-modal").textContent = countminute;
+    document.getElementById("countdown-second-modal").textContent = countseconds;
+}
+
+setInterval(updateCountdownModal, 1000);
+updateCountdownModal();

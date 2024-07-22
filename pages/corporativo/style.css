@@ -17,7 +17,7 @@ body {
 header {
     width: 100%;
     height: 110vh; /* Ajustar a la mitad de la altura de la ventana */
-    background-image: url('../../img/portada\ corp\ 2.jpg');
+    background-image: url('../../img/portada\ corp.jpg');
     background-size: cover;
     background-position: center;
 }

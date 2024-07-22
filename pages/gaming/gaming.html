@@ -51,21 +51,27 @@
             </div>
         </nav>
         <div class="button-bar">
-            <div class="button-container">
-                <div class="dropdown">
-                    <button id="dropdown-button" class="flyer-button">
-                        <img src="../../img/logowpp.png" alt="WhatsApp Icon">
-                    </button>
-                    <div id="dropdown-content" class="dropdown-content">
-                        <a href="https://wa.me/xxxxxxxxxx" class="dropdown-item whatsapp-link">Alberto 🧑🏽‍💻</a>
-                        <a href="https://wa.me/xxxxxxxxxx" class="dropdown-item whatsapp-link">Raul 🧑🏽‍💻</a>
-                        <a href="https://wa.me/xxxxxxxxxx" class="dropdown-item whatsapp-link">Solange 👩🏻‍💻</a>
+            <div>
+                <div class="button-container">
+                    <div class="dropdown">
+                        <button id="dropdown-button" class="flyer-button">
+                            <img src="../../img/logowpp.png" alt="WhatsApp Icon">
+                        </button>
+                        <div id="dropdown-content" class="dropdown-content">
+                            <a href="https://wa.me/xxxxxxxxxx" class="dropdown-item whatsapp-link">Alberto 🧑🏽‍💻</a>
+                            <a href="https://wa.me/xxxxxxxxxx" class="dropdown-item whatsapp-link">Raul 🧑🏽‍💻</a>
+                            <a href="https://wa.me/xxxxxxxxxx" class="dropdown-item whatsapp-link">Solange 👩🏻‍💻</a>
+                        </div>
                     </div>
+    
+                    <button class="flyer-button" onclick="openCalendly()"><img src="../../img/logomeet.png" alt=""></button>
+                    <button class="flyer-button" onclick="openContacto()"><img src="../../img/logotel.png" alt=""
+                            style=" margin-left:10px;"></button>
+            </div>
+                <div class="status">
+                    <p>Estamos <span id="statusText"></span></p>
                 </div>
-
-                <button class="flyer-button" onclick="openCalendly()"><img src="../../img/logomeet.png" alt=""></button>
-                <button class="flyer-button" onclick="openContacto()"><img src="../../img/logotel.png" alt=""
-                        style="height: 80px; width: 80px; margin-left:10px"></button>
+                
             </div>
         </div>
     </header>

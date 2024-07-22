@@ -52,3 +52,24 @@ document.addEventListener("DOMContentLoaded", function() {
         xhr.send(formData);
     });
 });
+
+
+function updateStatus() {
+    const now = new Date();
+    const hours = now.getUTCHours() - 3;  // Convert UTC to Argentina time (UTC-3)
+    const statusElement = document.getElementById('statusText');
+
+    if (hours >= 9 && hours < 18) {
+        statusElement.textContent = 'Online';
+        statusElement.className = 'online';
+    } else {
+        statusElement.textContent = 'Offline';
+        statusElement.className = 'offline';
+    }
+}
+
+// Actualiza el estado al cargar la página
+updateStatus();
+
+// Actualiza el estado cada minuto
+setInterval(updateStatus, 60000);

@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&display=swap');
 
 * {
     margin: 0;
@@ -24,7 +25,6 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
     z-index: 999;
 }
 
@@ -33,13 +33,15 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #323131;
-    padding: 40px; /* Aumenta el relleno para dar más espacio al contenido */
+    background-image: url('../img/popapp\ 2.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 40px;
     text-align: center;
     border: 1px solid #888;
-    width: 90%; /* Ajusta el ancho del pop-up */
+    width: 90%;
     max-width: 800px; /* Establece un ancho máximo para evitar que el pop-up sea demasiado grande */
-    height: 95%; /* Ajusta la altura del pop-up */
+    height: 90.5%; /* Ajusta la altura del pop-up */
     max-height: 600px; /* Establece una altura máxima */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -49,9 +51,47 @@ body {
     width: 100%;
 }
 
+.popup-form {
+    text-align: right;
+    position: relative;
+    top: 280px;
+}
+
+.popup-input {
+    width: 35%;
+    padding: 7px;
+    margin: 7px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.popup-submit {
+    width: 35%;
+    margin-top: 7px;
+    padding: 7px;
+    border: none;
+    border-radius: 5px;
+    background-color: #33A8DD;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.start{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight:bolder;
+    color: #908e8e;
+    position: relative;
+    top: 280px;
+
+}
+
 .transparent-strip {
     position: absolute;
-    bottom: 210px;
+    bottom: 10px;
     left: 40px;
     width: 90%;
     height: 50px; /* Altura de la franja transparente, ajusta según necesites */
@@ -59,12 +99,35 @@ body {
     pointer-events: none; /* Permite que los clics pasen a través de la franja transparente */
 }
 
-#countdown-text{
-    color: #C1D101;
-    margin-top: 15px;
-    font-family: "Silkscreen", sans-serif;
-    font-weight: 700;
+.contador{
+    display: flex;
+    justify-content: center;
+}
+
+.countdown{
+    background-color: whitesmoke;
+    width: 40px;
+    height: 35px;
+    border-radius: 5px;
+    color: #33A8DD;
+    margin-top: 2px;
+    margin-right: 20px;
+    font-family: "Readex Pro", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bolder;
     font-style: normal;
+    font-size: 30px;
+    font-variation-settings:
+        "HEXP" 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contador div .text {
+    color: gray;
+    font-size: small;
+    text-align: start;
 }
 
 .close {
