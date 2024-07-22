@@ -73,3 +73,46 @@ updateStatus();
 
 // Actualiza el estado cada minuto
 setInterval(updateStatus, 60000);
+
+
+// Hamburguesa
+
+// JavaScript para mostrar y ocultar el menú de navegación en dispositivos móviles
+document.getElementById('hamburger').addEventListener('click', function() {
+    const navbar = document.getElementById('navbar');
+    navbar.classList.toggle('open');
+});
+
+// Código existente para manejar el modal
+const modal = document.getElementById("myModal");
+const openModalLink = document.getElementById("openModalLink");
+const span = document.getElementsByClassName("close")[0];
+
+openModalLink.onclick = function() {
+    modal.style.display = "block";
+}
+
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+const statusText = document.getElementById("statusText");
+const currentHour = new Date().getHours();
+
+if (currentHour >= 9 && currentHour < 18) {
+    statusText.textContent = "Disponibles";
+    statusText.style.color = "green";
+} else {
+    statusText.textContent = "No Disponibles";
+    statusText.style.color = "red";
+}
+
+function openContacto() {
+    window.location.href = "contacto.html";
+}

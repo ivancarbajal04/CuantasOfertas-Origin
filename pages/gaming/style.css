@@ -11,12 +11,14 @@
 
 body {
     overflow-x: hidden;
-    background-color: #000000; /* Cambiar color de fondo a oscuro */
+    background-color: #000000;
+    /* Cambiar color de fondo a oscuro */
 }
 
 header {
     width: 100%;
-    height: 110vh; /* Ajustar a la mitad de la altura de la ventana */
+    height: 110vh;
+    /* Ajustar a la mitad de la altura de la ventana */
     background-image: url('../../img/portada\ gamer2.jpg');
     background-size: cover;
     background-position: center;
@@ -59,7 +61,17 @@ header {
     /* background-image: url('../../img/popapp.jpg'); */
     color: white;
     padding: 11px;
-    padding-right: 20px; /* Ajustar según necesidades */
+    padding-right: 20px;
+    /* Ajustar según necesidades */
+}
+
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
 }
 
 .lower-navbar {
@@ -114,9 +126,11 @@ header {
     position: absolute;
     width: 0;
     height: 2px;
-    background-color: #33A8DD; /* Color del "laser" */
+    background-color: #33A8DD;
+    /* Color del "laser" */
     transition: width 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.8); /* Agregar sombra blanca */
+    box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.8);
+    /* Agregar sombra blanca */
 }
 
 .nav-link::before {
@@ -162,9 +176,12 @@ header {
 }
 
 .button-container {
-    display: flex; /* Usar flexbox para alinear los botones */
-    justify-content: center; /* Centrar los botones horizontalmente */
-    align-items: center; /* Centrar los botones verticalmente */
+    display: flex;
+    /* Usar flexbox para alinear los botones */
+    justify-content: center;
+    /* Centrar los botones horizontalmente */
+    align-items: center;
+    /* Centrar los botones verticalmente */
     /* gap: 10px;  */
 }
 
@@ -177,16 +194,20 @@ header {
     cursor: pointer;
     position: relative;
     top: 8px;
-    
+
 }
 
 @keyframes highlight {
     0% {
-        box-shadow: 0 0 0 0 rgb(51, 168, 221); /* Sin sombra */
+        box-shadow: 0 0 0 0 rgb(51, 168, 221);
+        /* Sin sombra */
     }
+
     50% {
-        box-shadow: 0 0 10px 10px rgba(0, 255, 0, 0); /* Agranda la sombra */
+        box-shadow: 0 0 10px 10px rgba(0, 255, 0, 0);
+        /* Agranda la sombra */
     }
+
     100% {
         box-shadow: 0 0 0 0 rgb(51, 168, 221);
     }
@@ -195,9 +216,10 @@ header {
 .flyer-button img {
     width: 55px;
     height: 50px;
-    object-fit:contain;
+    object-fit: contain;
     border-radius: 50%;
     margin: 0 15px;
+    cursor: pointer;
     animation: highlight 3s infinite;
 }
 
@@ -218,16 +240,19 @@ header {
     white-space: nowrap;
     overflow-x: auto;
     overflow-y: auto;
-    animation: dropdown-animation 0.3s; 
+    animation: dropdown-animation 0.3s;
 }
 
 @keyframes dropdown-animation {
     from {
-        transform: translateY(-10px); /* Cambia la dirección de la animación */
+        transform: translateY(-10px);
+        /* Cambia la dirección de la animación */
         opacity: 0;
     }
+
     to {
-        transform: translateY(0); /* Cambia la dirección de la animación */
+        transform: translateY(0);
+        /* Cambia la dirección de la animación */
         opacity: 1;
     }
 }
@@ -239,24 +264,31 @@ header {
 
 
 .dropdown-content a.whatsapp-link {
-    color: #ffffff; /* Color del texto */
-    font-family: 'Roboto', sans-serif; /* Tipo de fuente */
-    font-weight: 500; /* Grosor de la fuente */
-    text-decoration: none; /* Quitar subrayado */
+    color: #ffffff;
+    /* Color del texto */
+    font-family: 'Roboto', sans-serif;
+    /* Tipo de fuente */
+    font-weight: 500;
+    /* Grosor de la fuente */
+    text-decoration: none;
+    /* Quitar subrayado */
     /* border: 1px solid #33A8DD; */
     border-radius: 3px;
     margin: 3px;
 }
 
 .dropdown-content a.whatsapp-link:hover {
-    color: #ffffff; /* Color del texto al pasar el mouse */
+    color: #ffffff;
+    /* Color del texto al pasar el mouse */
     border: 1px solid #33A8DD;
     box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.8);
 }
 
-.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
 
-.status p{
+.status p {
     color: rgb(106, 106, 106);
     position: relative;
     bottom: 30px;
@@ -267,13 +299,15 @@ header {
     /* font-weight: bold; */
     color: rgb(15, 220, 15);
 }
+
 .offline {
     /* font-weight: bold; */
     color: rgb(167, 0, 0);
 }
 
 .modal {
-    display: none; /* El modal estará oculto inicialmente */
+    display: none;
+    /* El modal estará oculto inicialmente */
     position: fixed;
     z-index: 1;
     left: 0;
@@ -281,7 +315,8 @@ header {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semi-transparente */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fondo oscuro semi-transparente */
 }
 
 .modal-content {
@@ -289,20 +324,24 @@ header {
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; /* Ancho del modal */
-    max-width: 600px; /* Ancho máximo del modal */
+    width: 80%;
+    /* Ancho del modal */
+    max-width: 600px;
+    /* Ancho máximo del modal */
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Sombra suave */
 }
 
 .modal-header,
 .modal-footer {
     padding: 10px 0;
-    border-bottom: 1px solid #ccc; /* Línea divisoria */
+    border-bottom: 1px solid #ccc;
+    /* Línea divisoria */
     text-align: center;
 }
 
-.modal-header{
+.modal-header {
     font-family: 'Roboto', sans-serif;
     color: white;
 }
@@ -312,7 +351,7 @@ header {
     text-align: left;
 }
 
-.modal-form label{
+.modal-form label {
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
     color: white;
@@ -334,15 +373,18 @@ header {
     padding: 10px;
     border: none;
     border-radius: 5px;
-    background-color: #33A8DD; /* Color de fondo del botón */
+    background-color: #33A8DD;
+    /* Color de fondo del botón */
     color: white;
     font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.3s; /* Transición suave */
+    transition: background-color 0.3s;
+    /* Transición suave */
 }
 
 .modal-submit:hover {
-    background-color: #1c6688; /* Cambio de color al pasar el mouse */
+    background-color: #1c6688;
+    /* Cambio de color al pasar el mouse */
 }
 
 .button-bar {
@@ -350,15 +392,18 @@ header {
     bottom: 5px;
     left: 0;
     width: 100%;
-    height: 70px; /* Altura deseada de la barra */
-    background-color: rgba(0, 0, 0, 0.5); /* Color de fondo oscuro transparente */
-    z-index: 1; /* Asegura que la barra esté detrás de los botones */
+    height: 70px;
+    /* Altura deseada de la barra */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Color de fondo oscuro transparente */
+    z-index: 1;
+    /* Asegura que la barra esté detrás de los botones */
     color: rgb(229, 225, 225);
     font-family: 'Roboto', sans-serif;
     text-align: center;
 }
 
-.slider{
+.slider {
     width: 100vw;
     background-color: white;
     height: auto;
@@ -368,30 +413,31 @@ header {
     /* box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.8); */
 }
 
-.slider .slide-track{
+.slider .slide-track {
     display: flex;
     animation: scroll 40s linear infinite;
     -webkit-animation: scroll 40s linear infinite;
     width: calc(200px * 11);
 }
 
-.slider .slide{
+.slider .slide {
     display: flex;
     align-items: center;
     margin: 10px;
     width: 200px;
 }
 
-.slider .slide img{
+.slider .slide img {
     width: 90%;
 }
 
 @keyframes scroll {
-    0%{
+    0% {
         transform: translateX(0);
         -webkit-animation: translateX(0);
     }
-    100%{
+
+    100% {
         transform: translateX(calc(-200px * 4));
         -webkit-animation: translateX(calc(-200px * 4));
     }
@@ -439,7 +485,8 @@ header {
     align-items: center;
     font-family: 'Roboto', sans-serif;
     padding: 20px;
-    background-color: #323131; /* Color de fondo oscuro */
+    background-color: #323131;
+    /* Color de fondo oscuro */
 }
 
 .footer-links a,
@@ -450,7 +497,8 @@ header {
     position: relative;
     border-radius: 15px;
     padding: 8px;
-    transition: color 0.3s; /* Transición de color */
+    transition: color 0.3s;
+    /* Transición de color */
 }
 
 .footer-links a::before,
@@ -461,9 +509,11 @@ header {
     position: absolute;
     width: 0;
     height: 2px;
-    background-color: #33A8DD; /* Color del "laser" */
+    background-color: #33A8DD;
+    /* Color del "laser" */
     transition: width 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.8); /* Agregar sombra blanca */
+    box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.8);
+    /* Agregar sombra blanca */
 }
 
 .footer-links a::before,
@@ -494,4 +544,50 @@ header {
     font-style: normal;
     color: #00FF00;
     text-shadow: 0px 0px 3px #000000;
-  }
+}
+
+
+@media (max-width: 768px) {
+
+    * {
+        overflow-x: hidden;
+    }
+
+    .lower-navbar {
+        display: none;
+        flex-direction: column;
+    }
+
+    .button-container {
+        overflow-y: hidden;
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+        overflow-y: hidden;
+    }
+
+
+    .flyer-button img {
+        animation: none;
+    }
+
+    .button-bar {
+        position: absolute;
+        top: 450px;
+        left: 0;
+        width: 100%;
+        height: 70px;
+        /* Altura deseada de la barra */
+        background-color: rgba(0, 0, 0, 0.5);
+        /* Color de fondo oscuro transparente */
+        z-index: 1;
+        /* Asegura que la barra esté detrás de los botones */
+        color: rgb(229, 225, 225);
+        font-family: 'Roboto', sans-serif;
+        text-align: center;
+        overflow-y: hidden;
+    }
+
+}
