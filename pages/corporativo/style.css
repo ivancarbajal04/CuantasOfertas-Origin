@@ -1,38 +1,298 @@
+/* Agregar una fuente de Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
 
-body{
-    background-color: #1e1e1ecd;
-    color: white;
-    font-family: 'Roboto', sans-serif;
-    font-size: large;
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-size:small; */
 }
 
-.logo{
-    display: flex;
-    justify-content: center;
+body {
+    overflow-x: hidden;
+    background-color: #000000; /* Cambiar color de fondo a oscuro */
 }
 
-.logo img{
-    width:300px;
-    height: 100px;
+header {
+    width: 100%;
+    height: 110vh; /* Ajustar a la mitad de la altura de la ventana */
+    background-image: url('../../img/portada\ corp\ 2.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
-.modal-form {
+.ofertas {
+    color: #33A8DD;
+}
+
+.navbar {
+    background: rgba(255, 255, 255, 0);
+    height: 80px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: 'Roboto', sans-serif;
 }
 
-.input-container {
+
+.upper-navbar {
     display: flex;
-    width: 50%;
+    align-items: center;
+    padding-left: 5px;
+}
+
+.navbar-brand img {
+    width: 190px;
+    height: auto;
+}
+
+.envios {
+    flex-grow: 1;
+    text-align: right;
+    height: 40px;
+    margin-left: 10px;
+    border-radius: 15px;
+    background-color: #323131;
+    /* background-image: url('../../img/popapp.jpg'); */
+    color: white;
+    padding: 11px;
+    padding-right: 20px; /* Ajustar según necesidades */
+}
+
+.lower-navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: 1;
+    margin-top: 10px;
+    margin-right: 5px;
+    padding-left: 5px;
+    padding-right: 17px;
+}
+
+.navbar-nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-grow: 1;
     justify-content: space-between;
 }
 
+.nav-item {
+    margin-right: 20px;
+    padding: 10px;
+}
+
+.nav-item::before {
+    content: '';
+    position: absolute;
+    height: 300px;
+    width: 300px;
+}
+
+.nav-item:last-child {
+    margin-right: 0;
+}
+
+.nav-link {
+    color: #ffffff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    border-radius: 15px;
+    padding: 8px;
+}
+
+.nav-link::before,
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #33A8DD; /* Color del "laser" */
+    transition: width 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.8); /* Agregar sombra blanca */
+}
+
+.nav-link::before {
+    top: 0;
+    left: 0;
+}
+
+.nav-link::after {
+    bottom: 0;
+    right: 0;
+}
+
+.nav-link:hover::before,
+.nav-link:hover::after {
+    width: 100%;
+    box-shadow: 0 0 20px 2px rgba(255, 255, 255, 0.8);
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    width: max-content;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    top: calc(100% + 5px);
+    left: 0;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: auto;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    z-index: 1001;
+}
+
+.dropdown-item {
+    padding: 10px 20px;
+    color: #333;
+    text-decoration: none;
+    display: block;
+}
+
+.button-container {
+    display: flex; /* Usar flexbox para alinear los botones */
+    justify-content: center; /* Centrar los botones horizontalmente */
+    align-items: center; /* Centrar los botones verticalmente */
+    /* gap: 10px;  */
+}
+
+.flyer-button {
+    /* width: 50px;
+    height: 50px; */
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    bottom: 30px;
+
+}
+
+
+
+.flyer-button img {
+    width: 130px;
+    height: 130px;
+    object-fit: contain;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    width: max-content;
+    background-color: transparent;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    bottom: calc(100% + 5px); /* Cambia la posición a partir de la parte inferior */
+    left: 0;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: auto;
+    animation: dropdown-animation 0.3s; /* Cambia la dirección de la animación */
+}
+
+@keyframes dropdown-animation {
+    from {
+        transform: translateY(-10px); /* Cambia la dirección de la animación */
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0); /* Cambia la dirección de la animación */
+        opacity: 1;
+    }
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    z-index: 1001;
+}
+
+/* Estilos de los enlaces dentro del menú desplegable */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a.whatsapp-link {
+    color: #ffffff; /* Color del texto */
+    font-family: 'Roboto', sans-serif; /* Tipo de fuente */
+    font-weight: 500; /* Grosor de la fuente */
+    text-decoration: none; /* Quitar subrayado */
+}
+
+.dropdown-content a.whatsapp-link:hover {
+    color: #ffffff; /* Color del texto al pasar el mouse */
+}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.modal {
+    display: none; /* El modal estará oculto inicialmente */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semi-transparente */
+}
+
+.modal-content {
+    background-color: #323131;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Ancho del modal */
+    max-width: 600px; /* Ancho máximo del modal */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.modal-header,
+.modal-footer {
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc; /* Línea divisoria */
+    text-align: center;
+}
+
+.modal-header{
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+/* Estilos para el formulario dentro del modal */
+.modal-form {
+    text-align: left;
+}
+
+.modal-form label{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    color: white;
+}
+
 .modal-input {
-    width: 48%; /* Establece un ancho del 48% para cada campo de nombre y apellido, y para cada campo de teléfono y email */
+    width: 100%;
     padding: 10px;
     margin-bottom: 20px;
     margin-top: 10px;
@@ -42,28 +302,178 @@ body{
     font-size: 16px;
 }
 
-.full-width {
-    width: 50%; /* Establece un ancho del 100% para el campo de consulta */
-}
-
 .modal-submit {
-    width: 30%;
+    width: 100%;
     padding: 10px;
     border: none;
     border-radius: 5px;
-    background-color: #74EE4A;
+    background-color: #33A8DD; /* Color de fondo del botón */
     color: white;
     font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s; /* Transición suave */
 }
 
 .modal-submit:hover {
-    background-color: #63cc3b;
+    background-color: #1c6688; /* Cambio de color al pasar el mouse */
 }
 
-.labels {
-    margin-top: 10px;
-    display: block;
+.button-bar {
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    width: 100%;
+    height: 70px; /* Altura deseada de la barra */
+    background-color: rgba(0, 0, 0, 0.5); /* Color de fondo oscuro transparente */
+    z-index: 1; /* Asegura que la barra esté detrás de los botones */
+    color: rgb(229, 225, 225);
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
 }
 
+.slider{
+    width: 100vw;
+    background-color: white;
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+    border: 3px solid #33A8DD;
+    /* box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.8); */
+}
+
+.slider .slide-track{
+    display: flex;
+    animation: scroll 40s linear infinite;
+    -webkit-animation: scroll 40s linear infinite;
+    width: calc(200px * 11);
+}
+
+.slider .slide{
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    width: 200px;
+}
+
+.slider .slide img{
+    width: 90%;
+}
+
+@keyframes scroll {
+    0%{
+        transform: translateX(0);
+        -webkit-animation: translateX(0);
+    }
+    100%{
+        transform: translateX(calc(-200px * 4));
+        -webkit-animation: translateX(calc(-200px * 4));
+    }
+}
+
+
+.panel {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    /* margin: 0px 200px; */
+}
+
+
+.column p {
+    text-align: center;
+    font-size: small;
+    color: #9e9c9c;
+}
+
+.circle {
+    width: 60px;
+    height: 60px;
+    background-color: rgb(148, 145, 145);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    border: 3px solid #33A8DD;
+    box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.5);
+}
+
+.circle img {
+    width: 40px;
+    height: 40px;
+}
+
+@keyframes highlight {
+    0% {
+        box-shadow: 0 0 0 0 rgb(193, 209, 1);
+    }
+    100% {
+        box-shadow: 0 0 20px 20px rgba(0, 255, 0, 0); 
+    }
+}
+
+/* Estilos del pie de página */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    padding: 20px;
+    background-color: #323131; /* Color de fondo oscuro */
+}
+
+.footer-links a,
+.social-icons a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    border-radius: 15px;
+    padding: 8px;
+    transition: color 0.3s; /* Transición de color */
+}
+
+.footer-links a::before,
+.footer-links a::after,
+.social-icons a::before,
+.social-icons a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #33A8DD; /* Color del "laser" */
+    transition: width 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.8); /* Agregar sombra blanca */
+}
+
+.footer-links a::before,
+.social-icons a::before {
+    top: 0;
+    left: 0;
+}
+
+.footer-links a::after,
+.social-icons a::after {
+    bottom: 0;
+    right: 0;
+}
+
+
+
+.footer-links a:hover::before,
+.footer-links a:hover::after,
+.social-icons a:hover::before,
+.social-icons a:hover::after {
+    width: 100%;
+    box-shadow: 0 0 20px 2px rgba(255, 255, 255, 0.8);
+}
+
+#countdown {
+    font-family: "Silkscreen", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #00FF00;
+    text-shadow: 0px 0px 3px #000000;
+  }

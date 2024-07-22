@@ -365,8 +365,8 @@ header {
         -webkit-animation: translateX(0);
     }
     100%{
-        transform: translateX(calc(-200px * 5.5));
-        -webkit-animation: translateX(calc(-200px * 5.5));
+        transform: translateX(calc(-200px * 4));
+        -webkit-animation: translateX(calc(-200px * 4));
     }
 }
 
