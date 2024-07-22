@@ -176,25 +176,29 @@ header {
     border-radius: 50%;
     cursor: pointer;
     position: relative;
-    bottom: 5px;
+    top: 8px;
+    
 }
 
 @keyframes highlight {
     0% {
-        box-shadow: 0 0 0 0 rgb(193, 209, 1); /* Sin sombra */
+        box-shadow: 0 0 0 0 rgb(51, 168, 221); /* Sin sombra */
+    }
+    50% {
+        box-shadow: 0 0 10px 10px rgba(0, 255, 0, 0); /* Agranda la sombra */
     }
     100% {
-        box-shadow: 0 0 20px 20px rgba(0, 255, 0, 0); /* Agranda la sombra */
+        box-shadow: 0 0 0 0 rgb(51, 168, 221);
     }
-    /* 100% {
-        box-shadow: 0 0 0 0 rgb(193, 209, 1);
-    } */
 }
 
 .flyer-button img {
-    width: 85px;
-    height: 75px;
-    object-fit:cover;
+    width: 55px;
+    height: 50px;
+    object-fit:contain;
+    border-radius: 50%;
+    margin: 0 15px;
+    animation: highlight 3s infinite;
 }
 
 .dropdown {
@@ -255,7 +259,7 @@ header {
 .status p{
     color: rgb(106, 106, 106);
     position: relative;
-    bottom: 60px;
+    bottom: 30px;
     left: 300px;
 }
 
@@ -426,15 +430,6 @@ header {
 .circle img {
     width: 40px;
     height: 40px;
-}
-
-@keyframes highlight {
-    0% {
-        box-shadow: 0 0 0 0 rgb(193, 209, 1);
-    }
-    100% {
-        box-shadow: 0 0 20px 20px rgba(0, 255, 0, 0); 
-    }
 }
 
 /* Estilos del pie de página */
