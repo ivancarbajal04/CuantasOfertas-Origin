@@ -545,15 +545,7 @@ header {
         overflow-x: hidden;
     }
 
-    header .navbar{
-        overflow-y: hidden;
-    }
-
-    .envios{
-        overflow-y: hidden;
-    }
-
-    .upper-navbar{
+    header, .navbar, .envios, .upper-navbar{
         overflow-y: hidden;
     }
 
