@@ -548,7 +548,7 @@ header {
     .botonera{
         position: relative;
         top:750px;
-        
+        overflow-y: hidden;
         /* height: 100%; */
     }
 
