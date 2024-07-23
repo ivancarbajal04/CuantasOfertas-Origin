@@ -543,6 +543,42 @@ header {
         overflow-x: hidden;
     }
 
+    .dropdown-menu {
+        /* display: none; */
+        /* position: absolute; */
+        width: max-content;
+        max-height: 300px; /* Ajusta la altura máxima según sea necesario */
+        background-color: #ffffff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        z-index: 2000; /* Valor alto para estar al frente */
+        top: calc(100% + 5px);
+        left: 0;
+        /* white-space: nowrap; */
+        /* overflow-y: auto; */
+    }
+    
+    .dropdown:hover .dropdown-menu {
+        display: block;
+        /* position: relative; */
+    }
+    
+    .dropdown-item {
+        padding: 10px;
+        text-align: center;
+    }
+    
+    .dropdown-content {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+    }
+    
+    .dropdown-content a.whatsapp-link {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
     .lower-navbar {
         display: none;
         flex-direction: column;
@@ -580,6 +616,7 @@ header {
     .footer-container{
         display: block;
     }
+
     .social-icons{
         display: flex;
         justify-content: space-around;
