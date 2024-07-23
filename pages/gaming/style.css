@@ -155,7 +155,7 @@ header {
     width: max-content;
     background-color: #ffffff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
+    z-index: 2000;
     top: calc(100% + 5px);
     left: 0;
     white-space: nowrap;
@@ -177,12 +177,14 @@ header {
 
 .button-container {
     display: flex;
-    /* Usar flexbox para alinear los botones */
     justify-content: center;
-    /* Centrar los botones horizontalmente */
     align-items: center;
-    /* Centrar los botones verticalmente */
-    /* gap: 10px;  */
+}
+
+.botonera{
+    position: relative;
+    top:480px;
+    z-index: 1000;
 }
 
 .flyer-button {
@@ -543,34 +545,53 @@ header {
         overflow-x: hidden;
     }
 
+    .botonera{
+        position: relative;
+        top:750px;
+        
+        /* height: 100%; */
+    }
+
     .dropdown-menu {
-        /* display: none; */
-        /* position: absolute; */
+        display: none;
+        position: absolute;
         width: max-content;
         max-height: 300px; /* Ajusta la altura máxima según sea necesario */
         background-color: #ffffff;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        z-index: 2000; /* Valor alto para estar al frente */
+        z-index: 2000;
         top: calc(100% + 5px);
         left: 0;
-        /* white-space: nowrap; */
+        white-space: nowrap;
         /* overflow-y: auto; */
+    }
+
+    .flyer-button {
+        background-color: transparent;
+        border: 1px solid transparent;
+        border-radius: 50%;
+        cursor: pointer;
+        /* position: relative; */
+        /* top: 8px; */
+    
     }
     
     .dropdown:hover .dropdown-menu {
         display: block;
-        /* position: relative; */
+        position: relative;
     }
     
     .dropdown-item {
-        padding: 10px;
-        text-align: center;
+        padding: 5px;
+        text-align: left;
+        font-size: small;
     }
     
     .dropdown-content {
         position: static;
         width: 100%;
         box-shadow: none;
+        overflow-x: hidden;
     }
     
     .dropdown-content a.whatsapp-link {
@@ -585,7 +606,11 @@ header {
     }
 
     .button-container {
+        /* position: fixed; */
         overflow-y: hidden;
+        display: flex;
+        justify-content: space-around;
+        z-index: 1000;
     }
 
     .dropdown {
@@ -594,13 +619,13 @@ header {
         overflow-y: hidden;
     }
 
-
     .flyer-button img {
         animation: none;
     }
 
     .button-bar {
-        position: absolute;
+        /* position: absolute; */
+        /* display: none; */
         top: 830px;
         left: 0;
         width: 100%;
@@ -611,6 +636,25 @@ header {
         font-family: 'Roboto', sans-serif;
         text-align: center;
         overflow-y: hidden;
+    }
+
+    .productos {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 20px;
+    }
+
+    .panel {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+    .column{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: 10px 0;
     }
 
     .footer-container{

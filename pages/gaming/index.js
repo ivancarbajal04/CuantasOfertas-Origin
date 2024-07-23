@@ -75,13 +75,6 @@ updateStatus();
 setInterval(updateStatus, 60000);
 
 
-// Hamburguesa
-
-// JavaScript para mostrar y ocultar el menú de navegación en dispositivos móviles
-document.getElementById('hamburger').addEventListener('click', function() {
-    const navbar = document.getElementById('navbar');
-    navbar.classList.toggle('open');
-});
 
 // Código existente para manejar el modal
 const modal = document.getElementById("myModal");
