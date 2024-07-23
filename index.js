@@ -67,7 +67,7 @@ window.onclick = function(event) {
 // Calendario
 
 function openCalendly() {
-    window.open('https://calendly.com/ivan-carabajal-gr_2', 'calendly', 'width=800,height=600');
+    window.open('https://calendly.com/ivancarbajal751/30min', 'calendly', 'width=800,height=600');
   }
 
 function openContacto(){

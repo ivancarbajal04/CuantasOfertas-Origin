@@ -13,7 +13,7 @@
 
 body {
     overflow-x: hidden;
-    background-color: #1e1e1ecd; /* Cambiar color de fondo a oscuro */
+    background-color: #000000; /* Cambiar color de fondo a oscuro */
 }
 
 .popup {
@@ -552,57 +552,37 @@ header {
     }
 }
 
-/* Medios de pago */
-
-.opciones-pago {
-    width: 75vw;
-    height: 25vh;
-    margin-left: 12%;
-    background-color: transparent;
-    padding: 10px 0;
-    border-radius: 20px;
-  }
-  
-.opciones-pago  .contenedor {
-    width: 80%;
-    margin: 0 auto;
-    text-align: center;
-  }
-  
-.contenedor  h2 {
-    font-size: 24px;
-    color: white;
-    /* margin-bottom: 20px; */
-  }
-  
-  .opciones {
+.posicionPagos{
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
-  }
-  
-  .opcion {
-    width: 25%;
-    padding: 20px;
-    /* border-right: 1px solid #ddd; */
-    text-align: center;
-  }
-  
-  
-  .opcion p {
-    margin-top: 10px;
-    padding-bottom: 10px;
-    font-size: 14px;
-    color: white;
-  }
-  
-.animate__flip{
-    animation-play-state: paused;
+    height: 80px;
+    /* width: 80%; */
+    background-color: rgba(255, 255, 255, 0.897);
 }
-.animate__flip:hover{
-    animation-play-state: running;
-    animation-iteration-count: infinite;
+
+.itemsPagos{
+    display: flex;
+    gap: 20px;
+}
+
+.mediosPago{
+    width: 50px ;
+    height: 50px;
+}
+
+.textosPagos{
+    margin-top: 5px;
+}
+
+.titulo{
+    font-size: large;
+    font-weight: bold;
+    color: #1b1a1a;
+}
+
+.subtitulo{
+    color: #888;
 }
 
 /* Estilos del pie de página */
