@@ -31,12 +31,27 @@ function showNextWord() {
 // Iniciar la animación
 showNextWord();
 
-// Boton whatsapp
+function updateStatus() {
+    const now = new Date();
+    const hours = now.getUTCHours() - 3;  // Convert UTC to Argentina time (UTC-3)
+    const statusElement = document.getElementById('statusText');
+
+    if (hours >= 9 && hours < 18) {
+        statusElement.textContent = 'Online';
+        statusElement.className = 'online';
+    } else {
+        statusElement.textContent = 'Offline';
+        statusElement.className = 'offline';
+    }
+}
+
+updateStatus();
+
 document.getElementById("dropdown-button").addEventListener("click", function() {
     document.getElementById("dropdown-content").classList.toggle("show");
 });
 
-// Cierra el menú si se hace clic fuera de él
+
 window.onclick = function(event) {
     if (!event.target.matches('.flyer-button')) {
         var dropdowns = document.getElementsByClassName("dropdown-content");

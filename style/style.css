@@ -16,8 +16,6 @@ body {
     background-color: #1e1e1ecd; /* Cambiar color de fondo a oscuro */
 }
 
-/* Pop up Super Ofertas weekend */
-
 .popup {
     display: none;
     position: fixed;
@@ -25,7 +23,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 999;
+    z-index: 1001;
 }
 
 .popup-content {
@@ -156,7 +154,7 @@ body {
     padding: 10px;
     border: none;
     border-radius: 5px;
-    background-color: #74EE4A;
+    background-color: #33A8DD;
     color: white;
     font-size: 16px;
     cursor: pointer;
@@ -164,7 +162,7 @@ body {
 }
 
 .modal-submit:hover {
-    background-color: #63cc3b;
+    background-color: #33A8DD;
 }
 
 header {
@@ -176,7 +174,7 @@ header {
 }
 
 .ofertas {
-    color: #C1D101;
+    color: #33A8DD;
 }
 
 .navbar {
@@ -263,7 +261,7 @@ header {
     position: absolute;
     width: 0;
     height: 2px;
-    background-color: #C1D101; /* Color del "laser" */
+    background-color: #33A8DD; /* Color del "laser" */
     transition: width 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.8); /* Agregar sombra blanca */
 }
@@ -284,6 +282,19 @@ header {
     box-shadow: 0 0 20px 2px rgba(255, 255, 255, 0.8);
 }
 
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    width: max-content;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 2000;
+    top: calc(100% + 5px);
+    left: 0;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: auto;
+}
 
 .dropdown:hover  {
     display: block;
@@ -305,45 +316,50 @@ header {
     /* gap: 10px;  */
 }
 
-@keyframes highlight {
-    0% {
-        box-shadow: 0 0 0 0 rgb(193, 209, 1); /* Sin sombra */
-    }
-    100% {
-        box-shadow: 0 0 20px 20px rgba(0, 255, 0, 0); /* Agranda la sombra */
-    }
-    /* 100% {
-        box-shadow: 0 0 0 0 rgb(193, 209, 1);
-    } */
+.botonera{
+    position: relative;
+    top: 485px;
+    z-index: 1000;
 }
 
 
 .flyer-button {
-    /* margin: 10px; */
-    /* padding: 15px; */
-    font-size: 16px;
-    font-weight: bold;
-    color: #ffffff;
+    /* width: 100px;
+    height: 100px; */
     background-color: transparent;
     border: 1px solid transparent;
     border-radius: 50%;
     cursor: pointer;
     position: relative;
-    overflow: hidden;
-    
+    top: 8px;
 }
 
+@keyframes highlight {
+    0% {
+        box-shadow: 0 0 0 0 rgb(51, 168, 221);
+        /* Sin sombra */
+    }
+
+    50% {
+        box-shadow: 0 0 10px 10px rgba(0, 255, 0, 0);
+        /* Agranda la sombra */
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgb(51, 168, 221);
+    }
+}
 
 .flyer-button img {
-    width: 170px; /* Ajusta este valor según sea necesario */
-    height: 170px; /* Ajusta este valor según sea necesario */
-    padding-bottom: 90px;
-    /* animation: highlight 3s infinite;  */
-    object-fit: contain; 
+    width: 55px;
+    height: 50px;
+    object-fit: contain;
+    border-radius: 50%;
+    margin: 0 15px;
+    cursor: pointer;
+    animation: highlight 3s infinite;
 }
 
-
-/* Estilos del texto en el flyer */
 .text-container {
     position: absolute;
     left: 11%; /* Ajustar la posición horizontal */
@@ -411,27 +427,50 @@ header {
 }
 
 .dropdown-content a.whatsapp-link {
-    color: #ffffff; /* Color del texto */
-    font-family: 'Roboto', sans-serif; /* Tipo de fuente */
-    font-weight: 500; /* Grosor de la fuente */
-    text-decoration: none; /* Quitar subrayado */
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 3px;
+    margin: 3px;
+    background-color: rgb(148, 145, 145);
 }
 
 .dropdown-content a.whatsapp-link:hover {
-    color: #ffffff; /* Color del texto al pasar el mouse */
+    color: #ffffff;
+    border: 1px solid #33A8DD;
+    box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.8);
 }
 
 .dropdown:hover .dropdown-content {display: block;}
 
+.status p {
+    color: rgb(106, 106, 106);
+    position: relative;
+    top: 20px;
+    /* bottom: 30px; */
+    left: 300px;
+}
+
+.online {
+    /* font-weight: bold; */
+    color: rgb(15, 220, 15);
+}
+
+.offline {
+    /* font-weight: bold; */
+    color: rgb(167, 0, 0);
+}
 
 .button-bar {
     position: absolute;
-    bottom: 10px;
+    /* bottom: 0px; */
+    top:566px;
     left: 0;
     width: 100%;
-    height: 80px; /* Altura deseada de la barra */
-    background-color: rgba(0, 0, 0, 0.5); /* Color de fondo oscuro transparente */
-    z-index: 1; /* Asegura que la barra esté detrás de los botones */
+    height: 70px;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
     color: rgb(229, 225, 225);
     font-family: 'Roboto', sans-serif;
     text-align: center;
@@ -596,7 +635,7 @@ header {
     position: absolute;
     width: 0;
     height: 2px;
-    background-color: #74EE4A; /* Color del "laser" */
+    background-color: #33A8DD; /* Color del "laser" */
     transition: width 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.8); /* Agregar sombra blanca */
 }
@@ -711,7 +750,7 @@ header {
     padding: 10px;
     border: none;
     border-radius: 5px;
-    background-color: #74EE4A; /* Color de fondo del botón */
+    background-color: #33A8DD; /* Color de fondo del botón */
     color: white;
     font-size: 16px;
     cursor: pointer;
@@ -719,5 +758,5 @@ header {
 }
 
 .modal-submit:hover {
-    background-color: #63cc3b; /* Cambio de color al pasar el mouse */
+    background-color: #33A8DD; /* Cambio de color al pasar el mouse */
 }
