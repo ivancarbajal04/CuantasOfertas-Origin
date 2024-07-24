@@ -28,23 +28,14 @@ header {
     color: #33A8DD;
 }
 
-.hamburger {
-    display: none;
-    font-size: 30px;
-    cursor: pointer;
-    background: none;
-    border: none;
-    color: white;
-}
-
 .navbar {
     background: rgba(255, 255, 255, 0);
-    height: 80px;
-    padding: 10px;
+    height: 5em;
+    padding: 0.625em;
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.125em 0.25em rgba(0, 0, 0, 0.1);
     font-family: 'Roboto', sans-serif;
 }
 
@@ -52,24 +43,23 @@ header {
 .upper-navbar {
     display: flex;
     align-items: center;
-    padding-left: 5px;
+    padding-left: 0.3125em;
 }
 
 .navbar-brand img {
-    width: 190px;
+    width: 12em;
     height: auto;
 }
 
 .envios {
     flex-grow: 1;
     text-align: right;
-    height: 40px;
-    margin-left: 10px;
-    border-radius: 15px;
+    height: 2.5em;
+    margin-left: 0.625em;
+    border-radius: 0.9375em;
     background-color: #323131;
     color: white;
-    padding: 11px;
-    padding-right: 20px;
+    padding: 0.6875em 1.25em 0.6875em 0;
 }
 
 .lower-navbar {
@@ -77,10 +67,9 @@ header {
     align-items: center;
     justify-content: space-between;
     flex-grow: 1;
-    margin-top: 10px;
-    margin-right: 5px;
-    padding-left: 5px;
-    padding-right: 17px;
+    margin-top: 0.625em;
+    margin-right: 0.3125em;
+    padding: 0 0.3125em 0 1.0625em;
 }
 
 .navbar-nav {
@@ -93,15 +82,15 @@ header {
 }
 
 .nav-item {
-    margin-right: 20px;
-    padding: 10px;
+    margin-right: 1.25em;
+    padding: 0.625em;
 }
 
 .nav-item::before {
     content: '';
     position: absolute;
-    height: 300px;
-    width: 300px;
+    height: 18.75em;
+    width: 18.75em;
 }
 
 .nav-item:last-child {
@@ -110,12 +99,12 @@ header {
 
 .nav-link {
     color: #ffffff;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    text-shadow: 0.0625em 0.0625em 0.125em rgba(0, 0, 0, 0.5);
     text-decoration: none;
     font-weight: 500;
     position: relative;
-    border-radius: 15px;
-    padding: 8px;
+    border-radius: 0.9375em;
+    padding: 0.5em;
 }
 
 .nav-link::before,
@@ -123,10 +112,10 @@ header {
     content: '';
     position: absolute;
     width: 0;
-    height: 2px;
+    height: 0.125em;
     background-color: #33A8DD;
     transition: width 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 0.625em 0.125em rgba(255, 255, 255, 0.8);
 }
 
 .nav-link::before {
@@ -142,7 +131,7 @@ header {
 .nav-link:hover::before,
 .nav-link:hover::after {
     width: 100%;
-    box-shadow: 0 0 20px 2px rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 1.25em 0.125em rgba(255, 255, 255, 0.8);
 }
 
 .dropdown-menu {
@@ -150,7 +139,7 @@ header {
     position: absolute;
     width: max-content;
     background-color: #ffffff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.125em 0.25em rgba(0, 0, 0, 0.1);
     z-index: 2000;
     top: calc(100% + 5px);
     left: 0;
@@ -165,7 +154,7 @@ header {
 }
 
 .dropdown-item {
-    padding: 10px 20px;
+    padding: 0.625em 1.25em;
     color: #333;
     text-decoration: none;
     display: block;
@@ -179,20 +168,17 @@ header {
 
 .botonera{
     position: relative;
-    top:480px;
+    top: 30em;
     z-index: 1000;
 }
 
 .flyer-button {
-    /* width: 100px;
-    height: 100px; */
     background-color: transparent;
-    border: 1px solid transparent;
+    border: 0.0625em solid transparent;
     border-radius: 50%;
     cursor: pointer;
     position: relative;
-    top: 8px;
-
+    top: 0.5em;
 }
 
 @keyframes highlight {
@@ -212,11 +198,11 @@ header {
 }
 
 .flyer-button img {
-    width: 55px;
-    height: 50px;
+    width: 3.4375em;
+    height: 3.125em;
     object-fit: contain;
     border-radius: 50%;
-    margin: 0 15px;
+    margin: 0 0.9375em;
     cursor: pointer;
     animation: highlight 3s infinite;
 }
@@ -231,7 +217,7 @@ header {
     position: absolute;
     width: max-content;
     background-color: transparent;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.125em 0.25em rgba(0, 0, 0, 0.1);
     z-index: 1000;
     bottom: calc(100% + 5px);
     left: 0;
@@ -243,7 +229,7 @@ header {
 
 @keyframes dropdown-animation {
     from {
-        transform: translateY(-10px);
+        transform: translateY(-0.625em);
         /* Cambia la dirección de la animación */
         opacity: 0;
     }
@@ -266,16 +252,15 @@ header {
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
     text-decoration: none;
-    border-radius: 3px;
-    margin: 3px;
+    border-radius: 0.1875em;
+    margin: 0.1875em;
     background-color: rgb(148, 145, 145);
 }
 
 .dropdown-content a.whatsapp-link:hover {
     color: #ffffff;
-    /* Color del texto al pasar el mouse */
-    border: 1px solid #33A8DD;
-    box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.8);
+    border: 0.0625em solid #33A8DD;
+    box-shadow: 0 0 0.625em 0.125em rgba(255, 255, 255, 0.8);
 }
 
 .dropdown:hover .dropdown-content {
@@ -285,23 +270,20 @@ header {
 .status p {
     color: rgb(106, 106, 106);
     position: relative;
-    bottom: 30px;
-    left: 300px;
+    bottom: 1.875em;
+    left: 18.75em;
 }
 
 .online {
-    /* font-weight: bold; */
     color: rgb(15, 220, 15);
 }
 
 .offline {
-    /* font-weight: bold; */
     color: rgb(167, 0, 0);
 }
 
 .modal {
     display: none;
-    /* El modal estará oculto inicialmente */
     position: fixed;
     z-index: 1;
     left: 0;
@@ -316,22 +298,18 @@ header {
 .modal-content {
     background-color: #323131;
     margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
+    padding: 1.25em;
+    border: 0.0625em solid #888;
     width: 80%;
-    /* Ancho del modal */
-    max-width: 600px;
-    /* Ancho máximo del modal */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Sombra suave */
+    max-width: 37.5em;
+    border-radius: 0.625em;
+    box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.1);
 }
 
 .modal-header,
 .modal-footer {
-    padding: 10px 0;
-    border-bottom: 1px solid #ccc;
-    /* Línea divisoria */
+    padding: 0.625em 0;
+    border-bottom: 0.0625em solid #ccc;
     text-align: center;
 }
 
@@ -340,7 +318,6 @@ header {
     color: white;
 }
 
-/* Estilos para el formulario dentro del modal */
 .modal-form {
     text-align: left;
 }
@@ -349,36 +326,32 @@ header {
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
     color: white;
+    margin: 0.625em 0 0.3125em;
 }
 
-.modal-input {
+.modal-form input[type="text"],
+.modal-form input[type="email"],
+.modal-form input[type="password"] {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    margin-top: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    padding: 0.3125em;
+    margin: 0.3125em 0 0.625em;
+    border: 0.0625em solid #ccc;
+    border-radius: 0.3125em;
     box-sizing: border-box;
-    font-size: 16px;
 }
 
-.modal-submit {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
+.modal-form button[type="submit"] {
     background-color: #33A8DD;
-    /* Color de fondo del botón */
-    color: white;
-    font-size: 16px;
+    color: #ffffff;
+    border: none;
+    padding: 0.625em 1.25em;
+    margin-top: 0.625em;
+    border-radius: 0.3125em;
     cursor: pointer;
-    transition: background-color 0.3s;
-    /* Transición suave */
 }
 
-.modal-submit:hover {
-    background-color: #1c6688;
-    /* Cambio de color al pasar el mouse */
+.modal-form button[type="submit"]:hover {
+    background-color: #1E90FF;
 }
 
 .button-bar {
@@ -586,6 +559,7 @@ header {
     .navbar-nav{
         opacity: 0;
         visibility: hidden;
+        z-index: 2000;
         
         position: absolute;
         flex-direction: column;
@@ -618,13 +592,8 @@ header {
 
     .botonera{
         position: relative;
-        top:470px;
-        /* overflow-y: hidden; */
-        /* height: 100%; */
-    }
-
-    .botonera .button{
-        display: absolute;
+        top:47em;
+        
     }
 
     .dropdown-menu {
@@ -646,13 +615,11 @@ header {
         border: 1px solid transparent;
         border-radius: 50%;
         cursor: pointer;
-        /* position: relative; */
-        /* top: 8px; */
     
     }
     
     .dropdown:hover .dropdown-menu {
-        display: block;
+        display: flex;
         position: relative;
     }
     
@@ -670,7 +637,7 @@ header {
     }
     
     .dropdown-content a.whatsapp-link {
-        display: block;
+        display: flex;
         width: 100%;
         text-align: center;
     }
@@ -685,17 +652,15 @@ header {
 
     .dropdown {
         position: relative;
-        display: inline-block;
+        display: flex;
         overflow-y: hidden;
     }
 
     .flyer-button img {
-        animation: none;
+        /* animation: none; */
     }
 
     .button-bar {
-        /* position: absolute; */
-        /* display: none; */
         top: 830px;
         left: 0;
         width: 100%;
