@@ -21,9 +21,12 @@
                     <i class="fa-solid fa-truck-fast"></i>
                     &nbsp;&nbsp;Envíos a todo el país
                 </div>
+
+                <button class="abrirMenu" id="abrirMenu"><i class="fa-solid fa-bars"></i></button>
             </div>
             <div class="lower-navbar" id="navbarNav">
-                <ul class="navbar-nav">
+                <ul class="navbar-nav visible" id="menuMobile">
+                    <button class="cerrarMenu" id="cerrarMenu"><i class="fa-solid fa-x"></i></button>
                     <li class="nav-item">
                         <a class="nav-link" href="#" id="openModalLink">Super <span
                                 class="ofertas">OfertasWeekend</span></a>
@@ -48,7 +51,9 @@
                                 class="ofertas">Corporativas</span></a>
                     </li>
                 </ul>
+
             </div>
+            
         </nav>
         <div class="button-bar">
             <div class="status">
@@ -249,7 +254,7 @@
                 </div>
             </div>
 
-            <script src="index.js"></script>
+    <script src="index.js"></script>
 </body>
 
 </html>
