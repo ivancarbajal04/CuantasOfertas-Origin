@@ -356,15 +356,12 @@ header {
 
 .button-bar {
     position: absolute;
-    bottom: 5px;
+    bottom: 0.3125em;
     left: 0;
     width: 100%;
-    height: 70px;
-    /* Altura deseada de la barra */
+    height: 4.375em;
     background-color: rgba(0, 0, 0, 0.5);
-    /* Color de fondo oscuro transparente */
     z-index: 1;
-    /* Asegura que la barra esté detrás de los botones */
     color: rgb(229, 225, 225);
     font-family: 'Roboto', sans-serif;
     text-align: center;
@@ -376,7 +373,7 @@ header {
     height: auto;
     margin: auto;
     overflow: hidden;
-    border: 3px solid #33A8DD;
+    border: 0.1875em solid #33A8DD;
     /* box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.8); */
 }
 
@@ -384,14 +381,14 @@ header {
     display: flex;
     animation: scroll 40s linear infinite;
     -webkit-animation: scroll 40s linear infinite;
-    width: calc(200px * 11);
+    width: calc(12.5em * 11);
 }
 
 .slider .slide {
     display: flex;
     align-items: center;
-    margin: 10px;
-    width: 200px;
+    margin: 0.625em;
+    width: 12.5em;
 }
 
 .slider .slide img {
@@ -401,12 +398,12 @@ header {
 @keyframes scroll {
     0% {
         transform: translateX(0);
-        -webkit-animation: translateX(0);
+        -webkit-transform: translateX(0);
     }
 
     100% {
-        transform: translateX(calc(-200px * 4));
-        -webkit-animation: translateX(calc(-200px * 4));
+        transform: translateX(calc(-12.5em * 4));
+        -webkit-transform: translateX(calc(-12.5em * 4));
     }
 }
 
@@ -414,11 +411,11 @@ header {
 .panel {
     display: flex;
     justify-content: space-around;
-    padding: 20px;
+    padding: 1.25em;
     color: white;
     font-family: 'Roboto', sans-serif;
-    /* margin: 0px 200px; */
 }
+
 
 
 .column p {
@@ -428,21 +425,21 @@ header {
 }
 
 .circle {
-    width: 60px;
-    height: 60px;
+    width: 3.75em;
+    height: 3.75em;
     background-color: rgb(148, 145, 145);
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 10px;
-    border: 3px solid #33A8DD;
-    box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.5);
+    margin-bottom: 0.625em;
+    border: 0.1875em solid #33A8DD;
+    box-shadow: 0 0 0.625em 0.125em rgba(255, 255, 255, 0.5);
 }
 
 .circle img {
-    width: 40px;
-    height: 40px;
+    width: 2.5em;
+    height: 2.5em;
 }
 
 /* Estilos del pie de página */
@@ -451,7 +448,7 @@ header {
     justify-content: space-between;
     align-items: center;
     font-family: 'Roboto', sans-serif;
-    padding: 20px;
+    padding: 1.25em;
     background-color: #323131;
 }
 
@@ -461,8 +458,8 @@ header {
     text-decoration: none;
     font-weight: 500;
     position: relative;
-    border-radius: 15px;
-    padding: 8px;
+    border-radius: 0.9375em;
+    padding: 0.5em;
     transition: color 0.3s;
 }
 
@@ -473,10 +470,10 @@ header {
     content: '';
     position: absolute;
     width: 0;
-    height: 2px;
+    height: 0.125em;
     background-color: #33A8DD;
     transition: width 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 0.625em 0.125em rgba(255, 255, 255, 0.8);
 }
 
 .footer-links a::before,
@@ -496,15 +493,7 @@ header {
 .social-icons a:hover::before,
 .social-icons a:hover::after {
     width: 100%;
-    box-shadow: 0 0 20px 2px rgba(255, 255, 255, 0.8);
-}
-
-#countdown {
-    font-family: "Silkscreen", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    color: #00FF00;
-    text-shadow: 0px 0px 3px #000000;
+    box-shadow: 0 0 1.25em 0.125em rgba(255, 255, 255, 0.8);
 }
 
 .abrirMenu{
@@ -513,8 +502,8 @@ header {
     background-color: transparent;
     border-color: transparent;
     cursor: pointer;
-    margin-left: 10px;
-    font-size: larger;
+    margin-left: 0.625em;
+    font-size: 1.2em;
 }
 
 .cerrarMenu{
@@ -523,8 +512,7 @@ header {
     background-color: transparent;
     border-color: transparent;
     cursor: pointer;
-    padding: 10px;
-    /* font-size: larger; */
+    padding: 0.625em;
 }
 
 @media (max-width: 768px) {
@@ -536,7 +524,7 @@ header {
 
     .navbar-brand img{
         width: 100%;
-        height: 80px;
+        height: 5em;
     }
 
     .lower-navbar{
@@ -553,25 +541,25 @@ header {
         display: flex;
         /* justify-content: right; */
         position: relative;
-        top: 20px;
+        top: 1.25em;
     }
 
-    .navbar-nav{
+    .navbar-nav {
         opacity: 0;
         visibility: hidden;
         z-index: 2000;
-        
+    
         position: absolute;
         flex-direction: column;
-        bottom: 5px;
-        top: 0px;
+        bottom: 0.3125em;
+        top: 0em;
         right: 0;
         overflow-y: hidden;
         align-items: end;
         background-color: #1c1c1c;
         box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
         transition: opacity 0.5s ease, visibility 0.5s ease;
-    }
+    }    
 
     .navbar-nav .visible{
         opacity: 1;
@@ -600,15 +588,15 @@ header {
         display: none;
         position: absolute;
         width: max-content;
-        max-height: 300px; /* Ajusta la altura máxima según sea necesario */
+        max-height: 18.75em;
         background-color: #ffffff;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 0.125em 0.25em rgba(0, 0, 0, 0.1);
         z-index: 2000;
-        top: calc(100% + 5px);
+        top: calc(100% + 0.3125em);
         left: 0;
         white-space: nowrap;
-        /* overflow-y: auto; */
     }
+    
 
     .flyer-button {
         background-color: transparent;
@@ -624,10 +612,11 @@ header {
     }
     
     .dropdown-item {
-        padding: 5px;
+        padding: 0.3125em;
         text-align: left;
-        font-size: small;
+        font-size: 0.875em;
     }
+    
     
     .dropdown-content {
         position: static;
@@ -643,7 +632,6 @@ header {
     }
 
     .button-container {
-        /* position: fixed; */
         overflow-y: hidden;
         display: flex;
         justify-content: space-around;
@@ -661,22 +649,13 @@ header {
     }
 
     .button-bar {
-        top: 830px;
-        left: 0;
-        width: 100%;
-        height: 70px;
-        background-color: rgba(0, 0, 0, 0.5);
-        z-index: 1;
-        color: rgb(229, 225, 225);
-        font-family: 'Roboto', sans-serif;
-        text-align: center;
-        overflow-y: hidden;
+        top: 51.875em;
     }
 
     .productos {
         display: grid;
         grid-template-columns: repeat(2, 1fr); 
-        gap: 20px;
+        gap: 1.25em;
     }
 
     .panel {
@@ -689,7 +668,7 @@ header {
         flex-direction: column;
         align-items: center;
         text-align: center;
-        margin: 10px 0;
+        margin: 0.625em 0;
     }
 
     .footer-container{
