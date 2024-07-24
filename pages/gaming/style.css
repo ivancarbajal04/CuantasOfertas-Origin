@@ -541,6 +541,7 @@ header {
     border-color: transparent;
     cursor: pointer;
     margin-left: 10px;
+    font-size: larger;
 }
 
 .cerrarMenu{
@@ -550,13 +551,19 @@ header {
     border-color: transparent;
     cursor: pointer;
     padding: 10px;
+    /* font-size: larger; */
 }
 
 @media (max-width: 768px) {
 
-    .navbar{
+    .upper-navbar{
         display: flex;
         justify-content: space-between;
+    }
+
+    .navbar-brand img{
+        width: 100%;
+        height: 80px;
     }
 
     .lower-navbar{
@@ -605,11 +612,19 @@ header {
         overflow-y: hidden;
     }
 
+    .envios{
+        display: none;
+    }
+
     .botonera{
         position: relative;
-        top:750px;
-        overflow-y: hidden;
+        top:470px;
+        /* overflow-y: hidden; */
         /* height: 100%; */
+    }
+
+    .botonera .button{
+        display: absolute;
     }
 
     .dropdown-menu {
