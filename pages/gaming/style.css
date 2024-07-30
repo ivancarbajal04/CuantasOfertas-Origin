@@ -168,7 +168,7 @@ header {
 
 .botonera{
     position: relative;
-    top: 30em;
+    top: 28.5em;
     z-index: 1000;
 }
 
@@ -179,6 +179,7 @@ header {
     cursor: pointer;
     position: relative;
     top: 0.5em;
+    margin: 2em;
 }
 
 @keyframes highlight {
@@ -666,6 +667,188 @@ header {
 
     .button-bar {
         top: 35em;
+    }
+
+    .productos {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 1.25em;
+    }
+
+    .panel {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+    .column{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: 0.625em 0;
+    }
+
+    .footer-container{
+        display: block;
+    }
+
+    .social-icons{
+        display: flex;
+        justify-content: space-around;
+    }
+
+}
+
+@media (max-width: 430px) {
+
+    .upper-navbar{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .navbar-brand img{
+        width: 100%;
+        height: 5em;
+    }
+
+    .lower-navbar{
+        height: 100%;
+        display: flex;
+        justify-content: end;
+    }
+
+    .abrirMenu{
+        display: block;
+    }
+
+    .cerrarMenu{
+        display: flex;
+        /* justify-content: right; */
+        position: relative;
+        top: 1.25em;
+    }
+
+    .navbar-nav {
+        opacity: 0;
+        visibility: hidden;
+        z-index: 2000;
+    
+        position: absolute;
+        flex-direction: column;
+        bottom: 0.3125em;
+        top: 0em;
+        right: 0;
+        overflow-y: hidden;
+        align-items: end;
+        background-color: #1c1c1c;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+        transition: opacity 0.5s ease, visibility 0.5s ease;
+    }    
+
+    .navbar-nav .visible{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    * {
+        overflow-x: hidden;
+    }
+
+    header, .navbar, .envios, .upper-navbar{
+        overflow-y: hidden;
+    }
+
+    .envios{
+        display: none;
+    }
+
+    .status{
+        overflow-y: hidden;
+        height: 100%;
+
+    }
+    
+    .status p {
+        left: 0.1em;
+        top: 3em;
+    }
+
+    .botonera{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        top:46.9em;
+        
+    }
+
+    .dropdown-menu {
+        display: none;
+        position: absolute;
+        width: max-content;
+        max-height: 18.75em;
+        background-color: #ffffff;
+        box-shadow: 0 0.125em 0.25em rgba(0, 0, 0, 0.1);
+        z-index: 2000;
+        top: calc(100% + 0.3125em);
+        left: 0;
+        white-space: nowrap;
+    }
+    
+
+    .flyer-button {
+        background-color: transparent;
+        border: 1px solid transparent;
+        border-radius: 50%;
+        cursor: pointer;
+        margin: 1em;
+    
+    }
+    
+    .dropdown:hover .dropdown-menu {
+        display: flex;
+        position: relative;
+    }
+    
+    .dropdown-item {
+        padding: 0.3125em;
+        text-align: left;
+        font-size: 0.875em;
+    }
+    
+    
+    .dropdown-content {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        overflow-x: hidden;
+    }
+    
+    .dropdown-content a.whatsapp-link {
+        display: flex;
+        width: 100%;
+        text-align: center;
+    }
+
+    .button-container {
+        overflow-y: hidden;
+        display: flex;
+        justify-content: space-around;
+        z-index: 1000;
+    }
+
+    .dropdown {
+        position: relative;
+        display: flex;
+        overflow-y: hidden;
+    }
+
+    .flyer-button img {
+        /* animation: none; */
+    }
+
+    .button-bar {
+        
+        top: 53em;
     }
 
     .productos {
