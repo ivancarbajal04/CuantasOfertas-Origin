@@ -270,7 +270,8 @@ header {
 .status p {
     color: rgb(106, 106, 106);
     position: relative;
-    bottom: 1.875em;
+    /* bottom: em; */
+    top: 1.3em;
     left: 18.75em;
 }
 
@@ -406,6 +407,8 @@ header {
         -webkit-transform: translateX(calc(-12.5em * 4));
     }
 }
+
+
 
 
 .panel {
@@ -578,9 +581,21 @@ header {
         display: none;
     }
 
+    .status{
+        overflow-y: hidden;
+        height: 100%;
+    }
+    
+    .status p {
+        left: 14.5em;
+        top: 1.5em;
+    }
+
     .botonera{
+        display: flex;
+        justify-content: center;
         position: relative;
-        top:47em;
+        top:29.5em;
         
     }
 
@@ -603,6 +618,7 @@ header {
         border: 1px solid transparent;
         border-radius: 50%;
         cursor: pointer;
+        margin: 1em;
     
     }
     
@@ -649,7 +665,7 @@ header {
     }
 
     .button-bar {
-        top: 51.875em;
+        top: 35em;
     }
 
     .productos {
