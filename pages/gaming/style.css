@@ -168,7 +168,7 @@ header {
 
 .botonera{
     position: relative;
-    top: 28.5em;
+    top: 27.2em;
     z-index: 1000;
 }
 
@@ -358,7 +358,7 @@ header {
 
 .button-bar {
     position: absolute;
-    bottom: 0.3125em;
+    top: 33.6em;
     left: 0;
     width: 100%;
     height: 4.375em;
