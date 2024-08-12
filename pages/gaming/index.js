@@ -3,7 +3,7 @@ function openCalendly() {
   }
 
 function openContacto(){
-    window.open('../../pages/contacto/index.html','Contactenme', 'width=700,height=500' )
+    window.open('../contacto/index.html','Contactenme', 'width=700,height=500' )
 }
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -117,8 +117,4 @@ if (currentHour >= 9 && currentHour < 18) {
 } else {
     statusText.textContent = "No Disponibles";
     statusText.style.color = "red";
-}
-
-function openContacto() {
-    window.location.href = "contacto.html";
 }
