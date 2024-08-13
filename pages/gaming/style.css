@@ -169,7 +169,7 @@ header {
 
 .botonera {
     position: relative;
-    top: 455px;
+    bottom: 30px;
     z-index: 1000;
 }
 
@@ -273,8 +273,9 @@ header {
 .status p {
     color: rgb(106, 106, 106);
     position: relative;
-    top: 20.8px;
-    left: 300px;
+    /* top: 20.8px; */
+    bottom: 58px;
+    left: 340px;
 }
 
 
