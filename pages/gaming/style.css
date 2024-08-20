@@ -17,7 +17,7 @@ body {
 
 header {
     width: 100%;
-    height: 110vh;
+    height: 100vh;
     /* Ajustar a la mitad de la altura de la ventana */
     background-image: url('../../img/portada\ gamer2.jpg');
     background-size: cover;
@@ -163,13 +163,15 @@ header {
 
 .button-container {
     display: flex;
+    /* margin: 0px 100px; */
     justify-content: center;
     align-items: center;
+    gap: 60px;
 }
 
-.botonera {
+.botonera{
     position: relative;
-    bottom: 30px;
+    top: 445px;
     z-index: 1000;
 }
 
@@ -180,7 +182,6 @@ header {
     cursor: pointer;
     position: relative;
     top: 8px;
-    margin: 32px;
 }
 
 @keyframes highlight {
@@ -223,6 +224,7 @@ header {
     z-index: 1000;
     bottom: calc(100% + 5px);
     left: 0;
+    top: 100px;
     white-space: nowrap;
     overflow-x: auto;
     overflow-y: auto;
@@ -255,7 +257,7 @@ header {
     font-weight: 500;
     text-decoration: none;
     border-radius: 3px;
-    margin: 3px;
+    /* margin: 3px; */
     background-color: rgb(148, 145, 145);
 }
 
@@ -273,9 +275,9 @@ header {
 .status p {
     color: rgb(106, 106, 106);
     position: relative;
-    /* top: 20.8px; */
-    bottom: 58px;
-    left: 340px;
+    top: 20px;
+    /* bottom: 30px; */
+    left: 300px;
 }
 
 
@@ -363,7 +365,8 @@ header {
 
 .button-bar {
     position: absolute;
-    top: 563px;
+    /* bottom: 0px; */
+    top:526px;
     left: 0;
     width: 100%;
     height: 70px;
@@ -607,11 +610,11 @@ header {
         display: none;
         position: absolute;
         width: max-content;
-        max-height: 300px; /* 18.75em = 300px */
+        max-height: 300px;
         background-color: #ffffff;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 0.125em = 2px, 0.25em = 4px */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         z-index: 2000;
-        top: calc(100% + 5px); /* 0.3125em = 5px */
+        top: calc(100% + 5px);
         left: 0;
         white-space: nowrap;
     }    
