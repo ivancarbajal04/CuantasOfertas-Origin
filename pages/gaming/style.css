@@ -163,7 +163,8 @@ header {
 
 .button-container {
     display: flex;
-    /* margin: 0px 100px; */
+    position: relative;
+    bottom: 20px;
     justify-content: center;
     align-items: center;
     gap: 60px;
@@ -171,7 +172,6 @@ header {
 
 .botonera{
     position: relative;
-    top: 445px;
     z-index: 1000;
 }
 
@@ -365,8 +365,8 @@ header {
 
 .button-bar {
     position: absolute;
-    /* bottom: 0px; */
-    top:526px;
+    bottom: 38px;
+    /* top:526px; */
     left: 0;
     width: 100%;
     height: 70px;
@@ -603,7 +603,8 @@ header {
         display: flex;
         justify-content: center;
         position: relative;
-        top: 472px; /* 29.5em = 472px */
+        bottom: 0;
+        /* top: 472px;  */
     }    
 
     .dropdown-menu {
@@ -624,7 +625,7 @@ header {
         border: 1px solid transparent;
         border-radius: 50%;
         cursor: pointer;
-        margin: 16px; /* 1em = 16px */
+        margin: 16px;
     }
     
     .dropdown:hover .dropdown-menu {
