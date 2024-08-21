@@ -108,6 +108,25 @@ window.onclick = function(event) {
     }
 }
 
+// Boton wpp
+
+document.getElementById("dropdown-button").addEventListener("click", function(event) {
+    event.stopPropagation();  // Evita que el evento se propague al window.onclick
+    document.getElementById("dropdown-content").classList.toggle("show");
+});
+
+window.onclick = function(event) {
+    if (!event.target.matches('.flyer-button')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        for (var i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+        }
+    }
+};
+
 const statusText = document.getElementById("statusText");
 const currentHour = new Date().getHours();
 

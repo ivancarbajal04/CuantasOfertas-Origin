@@ -213,24 +213,22 @@ header {
 .dropdown {
     position: relative;
     display: inline-block;
+    margin-top: 5px;
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
-    width: max-content;
+    /* border-radius: 10px; */
     background-color: transparent;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-    z-index: 1000;
-    bottom: calc(100% + 5px);
-    left: 0;
-    top: 100px;
-    white-space: nowrap;
-    overflow-x: auto;
-    overflow-y: auto;
-    animation: dropdown-animation 0.3s;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
 }
 
+.dropdown-content.show {
+    display: block;
+}
 
 @keyframes dropdown-animation {
     from {
@@ -257,12 +255,14 @@ header {
     font-weight: 500;
     text-decoration: none;
     border-radius: 3px;
-    /* margin: 3px; */
-    background-color: rgb(148, 145, 145);
+    margin: 3px;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* z-index: 1000; */
+    
 }
 
 .dropdown-content a.whatsapp-link:hover {
-    color: #ffffff;
+    /* color: #ffffff; */
     border: 1px solid #33A8DD;
     box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.8);
 }
@@ -595,16 +595,17 @@ header {
     }
     
     .status p {
-        left: 232px; /* 14.5em = 232px */
-        top: 24px; /* 1.5em = 24px */
+        left: 0px;
+        /* top: 24px; */
+        /* top: 0; */
     }
     
     .botonera {
         display: flex;
         justify-content: center;
         position: relative;
-        bottom: 0;
-        /* top: 472px;  */
+        bottom:80px;
+        /* top: 10px;  */
     }    
 
     .dropdown-menu {
@@ -614,7 +615,7 @@ header {
         max-height: 300px;
         background-color: #ffffff;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        z-index: 2000;
+        z-index: 3000;
         top: calc(100% + 5px);
         left: 0;
         white-space: nowrap;
@@ -642,6 +643,7 @@ header {
     .dropdown-content {
         position: static;
         width: 100%;
+        /* height: 100%; */
         box-shadow: none;
         overflow-x: hidden;
     }
@@ -649,6 +651,7 @@ header {
     .dropdown-content a.whatsapp-link {
         display: flex;
         width: 100%;
+        /* height: 100%; */
         text-align: center;
     }
 
@@ -656,7 +659,6 @@ header {
         overflow-y: hidden;
         display: flex;
         justify-content: space-around;
-        z-index: 1000;
     }
 
     .dropdown {
@@ -670,7 +672,10 @@ header {
     }
 
     .button-bar {
-        top: 560px;
+        /* top: 560px; */
+        bottom: 0px;
+        overflow-y: hidden;
+        height: 120px;
     }    
 
     .productos {
@@ -773,15 +778,17 @@ header {
     }
     
     .status p {
-        left: 2px;
-        top: 48px;
+        left: 0px;
+        /* top: 48px; */
     }
 
     .botonera {
         display: flex;
         justify-content: center;
         position: relative;
-        top: 465px;
+        /* top: 0px; */
+        bottom: 80px;
+        /* overflow: hidden; */
     }    
 
     .dropdown-menu {
@@ -834,6 +841,7 @@ header {
         display: flex;
         justify-content: space-around;
         z-index: 1000;
+        gap: 40px;
     }
 
     .dropdown {
@@ -843,11 +851,15 @@ header {
     }
 
     .flyer-button img {
-        /* animation: none; */
+        /* animation-: none; */
+        height: 50px;
+        width: 100%;
     }
 
     .button-bar {
-        top: 570px;
+        /* top: 0px; */
+        bottom: 0px;
+        overflow-y: hidden;
     }    
 
     .productos {
