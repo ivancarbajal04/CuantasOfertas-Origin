@@ -58,9 +58,11 @@
                     <p class="envio-text"><img src="img/camion.ico" alt="">
                         &nbsp;&nbsp;Envíos a todo el país</p>
                 </div>
+                <button class="abrirMenu" id="abrirMenu"><i class="fa-solid fa-bars"></i></button>
             </div>
             <div class="lower-navbar">
-                <ul class="navbar-nav">
+                <ul class="navbar-nav visible" id="menuMobile">
+                    <button class="cerrarMenu" id="cerrarMenu"><i class="fa-solid fa-x"></i></button>
                     <li class="nav-item">
                         <a class="nav-link" href="#" id="openModalLink">Super <span
                                 class="ofertas">OfertasWeekend</span></a>
@@ -96,24 +98,23 @@
             <div class="status">
                 <p>Estamos <span id="statusText"></span></p>
             </div>
-        </div>
-        <div class="botonera">
-            <div class="button-container">
-                <div class="dropdown">
-                    <button id="dropdown-button" class="flyer-button">
-                        <img src="img/wathsapp 3.png" alt="WhatsApp Icon">
-                    </button>
-                    <div id="dropdown-content" class="dropdown-content">
-                        <a href="https://wa.me/+5491158466042" class="dropdown-item whatsapp-link">Alberto 🧑🏽‍💻</a>
-                        <a href="https://wa.me/+5491132666634" class="dropdown-item whatsapp-link">Raul 🧑🏽‍💻</a>
-                        <a href="https://wa.me/xxxxxxxxxx" class="dropdown-item whatsapp-link">Solange 👩🏻‍💻</a>
+            <div class="botonera">
+                <div class="button-container">
+                    <div class="dropdown">
+                        <button id="dropdown-button" class="flyer-button">
+                            <img src="/img/wathsapp 3.png" alt="WhatsApp Icon">
+                        </button>
+                        <div id="dropdown-content" class="dropdown-content">
+                            <a href="https://wa.me/+5491158466042" class="dropdown-item whatsapp-link">Alberto 🧑🏽‍💻</a>
+                            <a href="https://wa.me/+5491132666634" class="dropdown-item whatsapp-link">Raul 🧑🏽‍💻</a>
+                            <a href="https://wa.me/xxxxxxxxxx" class="dropdown-item whatsapp-link">Solange 👩🏻‍💻</a>
+                        </div>
                     </div>
+    
+                    <button class="flyer-button" onclick="openCalendly()"><img src="/img/meet 3.png" alt=""></button>
+                    <button class="flyer-button" onclick="openContacto()"><img src="/img/tel 3.png" alt="" "></button>
                 </div>
-
-                <button class="flyer-button" onclick="openCalendly()"><img src="img/meet 3.png" alt=""></button>
-                <button class="flyer-button" onclick="openContacto()"><img src="../../img/tel 3.png" alt="" "></button>
             </div>
-        
         </div>
     </header>
     <main>

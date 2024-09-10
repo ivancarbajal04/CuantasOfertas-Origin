@@ -195,6 +195,20 @@ window.onload = function() {
     mostrarPopup();
 };
 
+const menuMobile = document.querySelector("#menuMobile")
+const abrir = document.querySelector("#abrirMenu")
+const cerrar = document.querySelector("#cerrarMenu")
+
+abrir.addEventListener("click", () => {
+    menuMobile.style.opacity = '1'
+    menuMobile.style.visibility = 'visible'
+})
+
+cerrar.addEventListener("click", () => {
+    menuMobile.style.opacity = '0'
+    menuMobile.style.visibility = 'hidden'
+})
+
 // Contador en pop up
 
 function updateCountdownPopup() {

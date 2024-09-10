@@ -167,7 +167,7 @@ body {
 
 header {
     width: 100%;
-    height: 110vh; /* Ajustar a la mitad de la altura de la ventana */
+    height: 100vh; /* Ajustar a la mitad de la altura de la ventana */
     background-image: url('../img/portada.jpg');
     background-size: cover;
     background-position: center;
@@ -184,30 +184,30 @@ header {
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
     font-family: 'Roboto', sans-serif;
 }
 
 .upper-navbar {
     display: flex;
     align-items: center;
-    padding-left: 5px;
+    padding-left: 10px;
 }
 
 .navbar-brand img {
-    width: 190px;
+    width: 160px;
     height: auto;
 }
 
 .envios {
     flex-grow: 1;
     text-align: right;
+    height: 40px;
     margin-left: 10px;
     border-radius: 15px;
     background-color: #323131;
     color: white;
-    padding: 11px;
-    padding-right: 20px; /* Ajustar según necesidades */
+    padding: 10px 15px 10px 0;
 }
 
 .lower-navbar {
@@ -216,8 +216,8 @@ header {
     justify-content: space-between;
     flex-grow: 1;
     margin-top: 10px;
-    padding-left: 5px;
-    padding-right: 17px;
+    margin-right: 5px;
+    padding: 0 5px 0 15px;
 }
 
 .navbar-nav {
@@ -247,12 +247,12 @@ header {
 
 .nav-link {
     color: #ffffff;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    text-shadow: 0.0625em 0.0625em 0.125em rgba(0, 0, 0, 0.5);
     text-decoration: none;
     font-weight: 500;
     position: relative;
     border-radius: 15px;
-    padding: 8px;
+    padding: 10px;
 }
 
 .nav-link::before,
@@ -261,9 +261,9 @@ header {
     position: absolute;
     width: 0;
     height: 2px;
-    background-color: #33A8DD; /* Color del "laser" */
+    background-color: #33A8DD;
     transition: width 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.8); /* Agregar sombra blanca */
+    box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.8);
 }
 
 .nav-link::before {
@@ -308,24 +308,23 @@ header {
     display: block;
 }
 
-/* Estilos de los botones */
+
 .button-container {
-    display: flex; /* Usar flexbox para alinear los botones */
-    justify-content: center; /* Centrar los botones horizontalmente */
-    align-items: center; /* Centrar los botones verticalmente */
-    /* gap: 10px;  */
+    display: flex;
+    position: relative;
+    bottom: 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
 }
 
 .botonera{
     position: relative;
-    top: 485px;
     z-index: 1000;
 }
 
 
 .flyer-button {
-    /* width: 100px;
-    height: 100px; */
     background-color: transparent;
     border: 1px solid transparent;
     border-radius: 50%;
@@ -385,33 +384,34 @@ header {
 .dropdown {
     position: relative;
     display: inline-block;
+    margin-top: 5px;
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
-    width: max-content;
     background-color: transparent;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    bottom: calc(100% + 5px); /* Cambia la posición a partir de la parte inferior */
-    left: 0;
-    white-space: nowrap;
-    overflow-x: auto;
-    overflow-y: auto;
-    animation: dropdown-animation 0.3s; /* Cambia la dirección de la animación */
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content.show {
+    display: block;
 }
 
 @keyframes dropdown-animation {
     from {
-        transform: translateY(-10px); /* Cambia la dirección de la animación */
+        transform: translateY(-10px);
         opacity: 0;
     }
+
     to {
-        transform: translateY(0); /* Cambia la dirección de la animación */
+        transform: translateY(0);
         opacity: 1;
     }
 }
+
 
 .dropdown:hover .dropdown-content {
     display: block;
@@ -437,7 +437,7 @@ header {
 }
 
 .dropdown-content a.whatsapp-link:hover {
-    color: #ffffff;
+    /* color: #ffffff; */
     border: 1px solid #33A8DD;
     box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.8);
 }
@@ -464,8 +464,7 @@ header {
 
 .button-bar {
     position: absolute;
-    /* bottom: 0px; */
-    top:566px;
+    bottom: 20px;
     left: 0;
     width: 100%;
     height: 70px;
@@ -589,11 +588,10 @@ header {
 .footer-container {
     display: flex;
     justify-content: space-between;
-    margin-top: 30px;
     align-items: center;
     font-family: 'Roboto', sans-serif;
     padding: 20px;
-    background-color: #323131; /* Color de fondo oscuro */
+    background-color: #323131;
 }
 
 .footer-links a,
@@ -640,6 +638,25 @@ header {
 .social-icons a:hover::after {
     width: 100%;
     box-shadow: 0 0 20px 2px rgba(255, 255, 255, 0.8);
+}
+
+.abrirMenu {
+    display: none;
+    color: #33A8DD;
+    background-color: transparent;
+    border-color: transparent;
+    cursor: pointer;
+    margin-left: 10px; /* 0.625em = 10px */
+    font-size: 19.2px; /* 1.2em = 19.2px */
+}
+
+.cerrarMenu {
+    display: none;
+    color: #33A8DD;
+    background-color: transparent;
+    border-color: transparent;
+    cursor: pointer;
+    padding: 10px; /* 0.625em = 10px */
 }
 
 #countdown {
@@ -739,4 +756,379 @@ header {
 
 .modal-submit:hover {
     background-color: #33A8DD; /* Cambio de color al pasar el mouse */
+}
+
+@media (max-width: 768px) {
+
+    .upper-navbar{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .navbar-brand img {
+        width: 80%;
+        height: 80px;
+    }    
+
+    .lower-navbar{
+        height: 100%;
+        display: flex;
+        justify-content: end;
+    }
+
+    .abrirMenu{
+        display: block;
+    }
+
+    .cerrarMenu {
+        display: flex;
+        position: relative;
+        top: 20px; /* 1.25em = 20px */
+    }
+    
+
+    .navbar-nav {
+        opacity: 0;
+        visibility: hidden;
+        z-index: 2000;
+    
+        position: absolute;
+        flex-direction: column;
+        bottom: 5px; /* 0.3125em = 5px */
+        top: 0;
+        right: 0;
+        overflow-y: hidden;
+        align-items: end;
+        background-color: #1c1c1c;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+        transition: opacity 0.5s ease, visibility 0.5s ease;
+    }
+    
+
+    .navbar-nav .visible{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    * {
+        overflow-x: hidden;
+    }
+
+    header, .navbar, .envios, .upper-navbar{
+        overflow-y: hidden;
+    }
+
+    .envios{
+        display: none;
+    }
+
+    .status{
+        overflow-y: hidden;
+        height: 100%;
+    }
+    
+    .status p {
+        left: 0px;
+        /* top: 24px; */
+        /* top: 0; */
+    }
+    
+    .botonera {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        bottom:80px;
+        /* top: 10px;  */
+    }    
+
+    .dropdown-menu {
+        display: none;
+        position: absolute;
+        width: max-content;
+        max-height: 300px;
+        background-color: #ffffff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        z-index: 3000;
+        top: calc(100% + 5px);
+        left: 0;
+        white-space: nowrap;
+    }    
+
+    .flyer-button {
+        background-color: transparent;
+        border: 1px solid transparent;
+        border-radius: 50%;
+        cursor: pointer;
+        margin: 16px;
+    }
+    
+    .dropdown:hover .dropdown-menu {
+        display: flex;
+        position: relative;
+    }
+    
+    .dropdown-item {
+        padding: 5px;
+        text-align: left;
+        font-size: 14px;
+    }
+    
+    .dropdown-content {
+        position: static;
+        width: 100%;
+        /* height: 100%; */
+        box-shadow: none;
+        overflow-x: hidden;
+    }
+    
+    .dropdown-content a.whatsapp-link {
+        display: flex;
+        width: 100%;
+        /* height: 100%; */
+        text-align: center;
+    }
+
+    .button-container {
+        overflow-y: hidden;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .dropdown {
+        position: relative;
+        display: flex;
+        overflow-y: hidden;
+    }
+
+    .flyer-button img {
+        /* animation: none; */
+    }
+
+    .button-bar {
+        /* top: 560px; */
+        bottom: 0px;
+        overflow-y: hidden;
+        height: 120px;
+    }    
+
+    .productos {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }    
+
+    .panel {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+    .column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: 10px 0;
+    }    
+
+    .footer-container{
+        display: block;
+    }
+
+    .social-icons{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .footer-links{
+        overflow-y: hidden;
+    }
+
+}
+
+@media (max-width: 430px) {
+
+    .upper-navbar{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .navbar-brand img {
+        width: 80%;
+        height: 50px;
+    }
+    
+    .lower-navbar{
+        height: 100%;
+        display: flex;
+        justify-content: end;
+    }
+
+    .abrirMenu{
+        display: block;
+    }
+
+    .cerrarMenu {
+        display: flex;
+        /* justify-content: right; */
+        position: relative;
+        top: 20px;
+    }    
+
+    .navbar-nav {
+        opacity: 0;
+        visibility: hidden;
+        z-index: 2000;
+    
+        position: absolute;
+        flex-direction: column;
+        bottom: 5px;
+        top: 0px;
+        right: 0;
+        overflow-y: hidden;
+        align-items: end;
+        background-color: #1c1c1c;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+        transition: opacity 0.5s ease, visibility 0.5s ease;
+    }    
+
+    .navbar-nav .visible{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    * {
+        overflow-x: hidden;
+    }
+
+    header, .navbar, .envios, .upper-navbar{
+        overflow-y: hidden;
+    }
+
+    .envios{
+        display: none;
+    }
+
+    .status{
+        overflow-y: hidden;
+        height: 100%;
+
+    }
+    
+    .status p {
+        left: 0px;
+        /* top: 48px; */
+    }
+
+    .botonera {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        /* top: 0px; */
+        bottom: 80px;
+        /* overflow: hidden; */
+    }    
+
+    .dropdown-menu {
+        display: none;
+        position: absolute;
+        width: max-content;
+        max-height: 300px;
+        background-color: #ffffff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        z-index: 2000;
+        top: calc(100% + 5px);
+        left: 0;
+        white-space: nowrap;
+    }    
+
+    .flyer-button {
+        background-color: transparent;
+        border: 1px solid transparent;
+        border-radius: 50%;
+        cursor: pointer;
+        margin: 16px;
+    }    
+    
+    .dropdown:hover .dropdown-menu {
+        display: flex;
+        position: relative;
+    }
+    
+    .dropdown-item {
+        padding: 5px;
+        text-align: left;
+        font-size: 14px;
+    }    
+    
+    .dropdown-content {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        overflow-x: hidden;
+    }
+    
+    .dropdown-content a.whatsapp-link {
+        display: flex;
+        width: 100%;
+        text-align: center;
+    }
+
+    .button-container {
+        overflow-y: hidden;
+        display: flex;
+        justify-content: space-around;
+        z-index: 1000;
+        gap: 40px;
+    }
+
+    .dropdown {
+        position: relative;
+        display: flex;
+        overflow-y: hidden;
+    }
+
+    .flyer-button img {
+        /* animation-: none; */
+        height: 50px;
+        width: 100%;
+    }
+
+    .button-bar {
+        /* top: 0px; */
+        bottom: 0px;
+        overflow-y: hidden;
+    }    
+
+    .productos {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }    
+
+    .panel {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+    .column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: 10px 0;
+    }    
+
+    .footer-container{
+        display: block;
+    }
+
+    .social-icons{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .footer-links{
+        overflow-y: hidden;
+    }
+
 }
