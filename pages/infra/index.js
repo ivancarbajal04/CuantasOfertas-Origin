@@ -3,7 +3,7 @@ function openCalendly() {
   }
 
 function openContacto(){
-    window.open('../../pages/contacto/index.html','Contactenme', 'width=700,height=500' )
+    window.open('../contacto/index.html','Contactenme', 'width=700,height=500' )
 }
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -52,3 +52,88 @@ document.addEventListener("DOMContentLoaded", function() {
         xhr.send(formData);
     });
 });
+
+const menuMobile = document.querySelector("#menuMobile")
+const abrir = document.querySelector("#abrirMenu")
+const cerrar = document.querySelector("#cerrarMenu")
+
+abrir.addEventListener("click", () => {
+    menuMobile.style.opacity = '1'
+    menuMobile.style.visibility = 'visible'
+})
+
+cerrar.addEventListener("click", () => {
+    menuMobile.style.opacity = '0'
+    menuMobile.style.visibility = 'hidden'
+})
+
+function updateStatus() {
+    const now = new Date();
+    const hours = now.getUTCHours() - 3;  // Convert UTC to Argentina time (UTC-3)
+    const statusElement = document.getElementById('statusText');
+
+    if (hours >= 9 && hours < 18) {
+        statusElement.textContent = 'Online';
+        statusElement.className = 'online';
+    } else {
+        statusElement.textContent = 'Offline';
+        statusElement.className = 'offline';
+    }
+}
+
+// Actualiza el estado al cargar la página
+updateStatus();
+
+// Actualiza el estado cada minuto
+setInterval(updateStatus, 60000);
+
+
+
+// Código existente para manejar el modal
+const modal = document.getElementById("myModal");
+const openModalLink = document.getElementById("openModalLink");
+const span = document.getElementsByClassName("close")[0];
+
+openModalLink.onclick = function() {
+    modal.style.display = "block";
+}
+
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+// Boton wpp
+
+document.getElementById("dropdown-button").addEventListener("click", function(event) {
+    event.stopPropagation();  // Evita que el evento se propague al window.onclick
+    document.getElementById("dropdown-content").classList.toggle("show");
+});
+
+window.onclick = function(event) {
+    if (!event.target.matches('.flyer-button')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        for (var i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+        }
+    }
+};
+
+const statusText = document.getElementById("statusText");
+const currentHour = new Date().getHours();
+
+if (currentHour >= 9 && currentHour < 18) {
+    statusText.textContent = "Disponibles";
+    statusText.style.color = "green";
+} else {
+    statusText.textContent = "No Disponibles";
+    statusText.style.color = "red";
+}

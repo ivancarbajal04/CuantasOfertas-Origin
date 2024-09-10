@@ -556,7 +556,6 @@ header {
     justify-content: space-evenly;
     align-items: center;
     height: 80px;
-    /* width: 80%; */
     background-color: rgba(255, 255, 255, 0.897);
 }
 
@@ -909,26 +908,48 @@ header {
         bottom: 0px;
         overflow-y: hidden;
         height: 120px;
-    }    
+    }
 
-    .productos {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
+    .card-container{
+        display: block;
+    }
+
+    .posicionPagos{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 80px;
+        background-color: rgba(255, 255, 255, 0.897);
+        overflow-y: hidden;
+    }
+
+    .itemsPagos{
+        display: flex;
         gap: 20px;
-    }    
-
-    .panel {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
+        margin: 0 5px;
     }
     
-    .column {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        margin: 10px 0;
-    }    
+    .mediosPago{
+        width: 40px ;
+        height: 30px;
+        margin-top: 15px;
+
+    }
+    
+    .textosPagos{
+        margin-top: 5px;
+    }
+    
+    .titulo{
+        font-size:small;
+        font-weight: bold;
+        color: #1b1a1a;
+    }
+    
+    .subtitulo{
+        color: #888;
+        font-size: smaller;
+    }
 
     .footer-container{
         display: block;

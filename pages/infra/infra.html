@@ -21,9 +21,12 @@
                     <i class="fa-solid fa-truck-fast"></i>
                     &nbsp;&nbsp;Envíos a todo el país
                 </div>
+
+                <button class="abrirMenu" id="abrirMenu"><i class="fa-solid fa-bars"></i></button>
             </div>
-            <div class="lower-navbar">
-                <ul class="navbar-nav">
+            <div class="lower-navbar" id="navbarNav">
+                <ul class="navbar-nav visible" id="menuMobile">
+                    <button class="cerrarMenu" id="cerrarMenu"><i class="fa-solid fa-x"></i></button>
                     <li class="nav-item">
                         <a class="nav-link" href="#" id="openModalLink">Super <span
                                 class="ofertas">OfertasWeekend</span></a>
@@ -51,21 +54,25 @@
             </div>
         </nav>
         <div class="button-bar">
-            <div class="button-container">
-                <div class="dropdown">
-                    <button id="dropdown-button" class="flyer-button">
-                        <img src="../../img/logowpp.png" alt="WhatsApp Icon">
-                    </button>
-                    <div id="dropdown-content" class="dropdown-content">
-                        <a href="https://wa.me/xxxxxxxxxx" class="dropdown-item whatsapp-link">Alberto 🧑🏽‍💻</a>
-                        <a href="https://wa.me/xxxxxxxxxx" class="dropdown-item whatsapp-link">Raul 🧑🏽‍💻</a>
-                        <a href="https://wa.me/xxxxxxxxxx" class="dropdown-item whatsapp-link">Solange 👩🏻‍💻</a>
+            <div class="status">
+                <p>Estamos <span id="statusText"></span></p>
+            </div>
+            <div class="botonera">
+                <div class="button-container">
+                    <div class="dropdown">
+                        <button id="dropdown-button" class="flyer-button">
+                            <img src="/img/wathsapp 3.png" alt="WhatsApp Icon">
+                        </button>
+                        <div id="dropdown-content" class="dropdown-content">
+                            <a href="https://wa.me/+5491158466042" class="dropdown-item whatsapp-link">Alberto 🧑🏽‍💻</a>
+                            <a href="https://wa.me/+5491132666634" class="dropdown-item whatsapp-link">Raul 🧑🏽‍💻</a>
+                            <a href="https://wa.me/xxxxxxxxxx" class="dropdown-item whatsapp-link">Solange 👩🏻‍💻</a>
+                        </div>
                     </div>
+    
+                    <button class="flyer-button" onclick="openCalendly()"><img src="/img/meet 3.png" alt=""></button>
+                    <button class="flyer-button" onclick="openContacto()"><img src="/img/tel 3.png" alt="" "></button>
                 </div>
-
-                <button class="flyer-button" onclick="openCalendly()"><img src="../../img/logomeet.png" alt=""></button>
-                <button class="flyer-button" onclick="openContacto()"><img src="../../img/logotel.png" alt=""
-                        style="height: 140px; width: 140px;"></button>
             </div>
         </div>
     </header>
@@ -138,6 +145,7 @@
             </div>
             </div>
         </section>
+        <section class="productos">
         <div class="panel">
             <div class="column">
                 <div class="circle">
@@ -157,14 +165,15 @@
                 </div>
                 <p>Preguntar</p>
             </div>
-        </div>
-        <div class="panel">
             <div class="column">
                 <div class="circle">
                     <img src="../../img/infraestructuraProd/icons8-cámara-ptz-48.png" alt="">
                 </div>
                 <p>Camaras</p>
             </div>
+        </div>
+        <div class="panel">
+
             <div class="column">
                 <div class="circle">
                     <img src="../../img/infraestructuraProd/icons8-gps-en-busca-50.png" alt="">
@@ -177,8 +186,6 @@
                 </div>
                 <p>Servidores</p>
             </div>
-        </div>
-        <div class="panel">
             <div class="column">
                 <div class="circle">
                     <img src="../../img/infraestructuraProd/icons8-hdd-100.png" alt="">
@@ -191,34 +198,14 @@
                 </div>
                 <p>Herramientas</p>
             </div>
+        </div>
+        <div class="panel">
             <div class="column">
                 <div class="circle">
                     <img src="../../img/infraestructuraProd/icons8-memoria-ram-100.png" alt="">
                 </div>
                 <p>Memorias RAM</p>
             </div>
-        </div>
-        <div class="panel">
-            <div class="column">
-                <div class="circle">
-                    <img src="../../img/infraestructuraProd/icons8-power-64.png" alt="">
-                </div>
-                <p>Preguntar</p>
-            </div>
-            <div class="column">
-                <div class="circle">
-                    <img src="../../img/infraestructuraProd/icons8-protección-de-datos-50.png" alt="">
-                </div>
-                <p>Preguntar</p>
-            </div>
-            <div class="column">
-                <div class="circle">
-                    <img src="../../img/infraestructuraProd/icons8-reciclaje-50.png" alt="">
-                </div>
-                <p>Preguntar</p>
-            </div>
-        </div>
-        <div class="panel">
             <div class="column">
                 <div class="circle">
                     <img src="../../img/infraestructuraProd/icons8-router-de-wifi-50.png" alt="">
@@ -237,7 +224,9 @@
                 </div>
                 <p>Preguntar</p>
             </div>
+            
         </div>
+    </section>
     </main>
 
     <footer>
@@ -245,8 +234,6 @@
             <div class="footer-links">
                 <a href="/img/Garantía y devoluciones.pdf" target="_blank">Garantía y devoluciones</a>
                 <a href="/img/terminos y condiciones.pdf">Terminos y condiciones</a>
-                <a href="../preguntas frecuentes/pregfrec.html">Preguntas Frecuentes</a>
-                <a href="pagina2.html">Formas de pago</a>
             </div>
             <div class="social-icons">
                 <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
