@@ -511,7 +511,7 @@ header {
     border-color: transparent;
     cursor: pointer;
     margin-left: 10px; /* 0.625em = 10px */
-    font-size: 19.2px; /* 1.2em = 19.2px */
+    font-size: 30px;
 }
 
 .cerrarMenu {
