@@ -724,7 +724,7 @@ header {
 
     header {
         width: 100%;
-        height: 100vh;
+        height: 80vh;
         /* Ajustar a la mitad de la altura de la ventana */
         background-image: url('../../img/gamer.jpg');
         background-size: cover;
@@ -860,9 +860,11 @@ header {
     .button-container {
         overflow-y: hidden;
         display: flex;
+        position: relative;
         justify-content: space-around;
         z-index: 1000;
         gap: 40px;
+        top: 10px;
     }
 
     .dropdown {
@@ -872,15 +874,16 @@ header {
     }
 
     .flyer-button img {
-        /* animation-: none; */
-        height: 50px;
-        width: 100%;
+        animation: none;
+        height: 30px;
+        /* width: 100%; */
     }
 
     .button-bar {
         /* top: 0px; */
-        bottom: 0px;
+        top: 590px;
         overflow-y: hidden;
+        height: 90px;
     }    
 
     .productos {
@@ -916,3 +919,8 @@ header {
     }
 
 }
+@media (max-width: 1400px) {
+    .button-bar{
+        bottom: 20px;
+    }
+  }
