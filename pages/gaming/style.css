@@ -510,8 +510,9 @@ header {
     background-color: transparent;
     border-color: transparent;
     cursor: pointer;
-    margin-left: 10px; /* 0.625em = 10px */
-    font-size: 30px;
+    position: relative;
+    right: 20px;
+    font-size: 19.2px;
 }
 
 .cerrarMenu {
