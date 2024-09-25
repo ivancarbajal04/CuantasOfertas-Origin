@@ -800,7 +800,7 @@ header {
     
     .status p {
         left: 0px;
-        /* top: 48px; */
+        top: 48px;
     }
 
     .botonera {
@@ -860,11 +860,11 @@ header {
     .button-container {
         overflow-y: hidden;
         display: flex;
-        position: relative;
+        /* position: relative; */
         justify-content: space-around;
         z-index: 1000;
         gap: 40px;
-        top: 10px;
+        /* top: 0px; */
     }
 
     .dropdown {
@@ -874,16 +874,16 @@ header {
     }
 
     .flyer-button img {
-        animation: none;
-        height: 30px;
-        /* width: 100%; */
+        /* animation: none; */
+        height: 35px;
+        width: 35px;
     }
 
     .button-bar {
         /* top: 0px; */
-        top: 590px;
+        top: 520px;
         overflow-y: hidden;
-        height: 90px;
+        height: 80px;
     }    
 
     .productos {
