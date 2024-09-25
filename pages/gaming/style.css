@@ -512,7 +512,8 @@ header {
     cursor: pointer;
     position: relative;
     right: 20px;
-    font-size: 19.2px;
+    top: 5px;
+    font-size: 25px;
 }
 
 .cerrarMenu {
