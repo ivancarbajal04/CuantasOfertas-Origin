@@ -759,6 +759,7 @@ header {
         position: relative;
         /* right: 5px; */
         top: 4.3px;
+        transform: rotate(90deg);
     }
 
     .abrirMenu{
