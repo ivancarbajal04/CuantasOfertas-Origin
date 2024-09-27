@@ -510,9 +510,6 @@ header {
     background-color: transparent;
     border-color: transparent;
     cursor: pointer;
-    position: relative;
-    right: 20px;
-    top: 5px;
     font-size: 25px;
 }
 
@@ -736,6 +733,7 @@ header {
     .upper-navbar{
         display: flex;
         justify-content: space-between;
+        height: 90px;
     }
 
     .navbar-brand img {
@@ -751,7 +749,10 @@ header {
     }
 
     .abrirMenu{
-        display: block;
+        position: relative;
+        right: 60px;
+        /* bottom: 0px; */
+        top: 7px;
     }
 
     .cerrarMenu {
