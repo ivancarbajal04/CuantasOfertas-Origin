@@ -750,7 +750,7 @@ header {
 
     .abrirMenu{
         position: relative;
-        right: 60px;
+        /* right: 60px; */
         /* bottom: 0px; */
         /* top: 7px; */
     }
