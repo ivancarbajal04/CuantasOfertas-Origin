@@ -510,7 +510,7 @@ header {
     background-color: transparent;
     border-color: transparent;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 21px;
 }
 
 .cerrarMenu {
@@ -757,7 +757,7 @@ header {
 
     .abrirMenu i{
         position: relative;
-        right: 7px;
+        right: 5px;
         top: 4.3px;
         /* transform: rotate(90deg); */
     }
